@@ -1,0 +1,4826 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Medical Device Regulatory and Surveillance Ontology"
+    },
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "version" : "Final Version - PEC2",
+    "author" : [ "Daniela Garcia Chavero", "Johan Marin Chamorro" ],
+    "description" : {
+      "en" : "The medical device ontology is designed to structure and represent information about medical devices and post-market surveillance within the European regulatory framework (MDR/IVDR)."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Johan Marin Chamorro",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Daniela Garcia Chavero",
+        "type" : "label"
+      } ],
+      "createdWith" : [ {
+        "identifier" : "createdWith",
+        "language" : "undefined",
+        "value" : "https://chowlk.linkeddata.es/",
+        "type" : "iri"
+      } ],
+      "citation" : [ {
+        "identifier" : "citation",
+        "language" : "en",
+        "value" : "Garcia Chavero, D. and Marin Chamorro, J. Medical Device Regulatory and Surveillance Ontology.",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "2026-04-23",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "Final Version - PEC2",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2017/745/oj",
+        "type" : "iri"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "Ontology detailing medical devices, post-market surveillance, incidents, and field safety corrective actions compliant with EU MDR/IVDR regulations.",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Medical Device Regulatory and Surveillance Ontology",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "UOC - Universitat Oberta de Catalunya",
+        "type" : "label"
+      } ],
+      "includedInDataCatalog" : [ {
+        "identifier" : "includedInDataCatalog",
+        "language" : "undefined",
+        "value" : "https://lov.linkeddata.es/dataset/lov",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "mdo",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "en",
+        "value" : "FUOC - Fundació Universitat Oberta de Catalunya",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "en",
+        "value" : "2026-04-23",
+        "type" : "label"
+      } ],
+      "logo" : [ {
+        "identifier" : "logo",
+        "language" : "undefined",
+        "value" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Small_logo_UOC.svg/3840px-Small_logo_UOC.svg.png",
+        "type" : "iri"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#",
+        "type" : "iri"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "Garcia Chavero, D. and Marin Chamorro, J. Medical Device Regulatory and Surveillance Ontology. 2026.",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "en",
+        "value" : "2026-04-23",
+        "type" : "label"
+      } ],
+      "doi" : [ {
+        "identifier" : "doi",
+        "language" : "en",
+        "value" : "10.5281/zenodo.1000000",
+        "type" : "label"
+      } ],
+      "status" : [ {
+        "identifier" : "status",
+        "language" : "en",
+        "value" : "Published",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "133",
+    "type" : "owl:Class"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "139",
+    "type" : "owl:Class"
+  }, {
+    "id" : "140",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "148",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "166",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "170",
+    "type" : "owl:Class"
+  }, {
+    "id" : "145",
+    "type" : "owl:Class"
+  }, {
+    "id" : "156",
+    "type" : "owl:Class"
+  }, {
+    "id" : "164",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "165",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "163",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "147",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "0",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "1",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/description",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "description"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/date",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "identifier"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ContaminationRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContaminationRisk",
+      "en" : "Contamination Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-017",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-017"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk of contamination leading to systematic diagnostic errors."
+    },
+    "id" : "25",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Closed",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Closed",
+      "en" : "Closed"
+    },
+    "comment" : {
+      "en" : "Status indicating that the action has been completed."
+    },
+    "id" : "27",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "7", "19", "20" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://purl.org/dc/terms/date",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RadiationRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiationRisk",
+      "en" : "Radiation Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-011"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk associated with unintended ionizing radiation exposure."
+    },
+    "id" : "45",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/date",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Risk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Risk",
+      "en" : "Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-020",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-020"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-010"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-011"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-001"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-006"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-017",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-017"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-018",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-018"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-007"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-019",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-019"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-008"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-009"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-013"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-002"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-004"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-016",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-016"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-005"
+      }
+    } ],
+    "comment" : {
+      "en" : "A potential source of harm or adverse health effect associated with a device."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ImplantableDevice",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableDevice",
+      "en" : "Implantable Device"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-025",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-025"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-010"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-009"
+      }
+    } ],
+    "comment" : {
+      "en" : "A device intended to be introduced into the human body."
+    },
+    "id" : "47",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#PatientHarm",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PatientHarm",
+      "en" : "Patient Harm"
+    },
+    "comment" : {
+      "en" : "Risk category involving direct injury to the patient."
+    },
+    "id" : "50",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InjuryRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InjuryRisk",
+      "en" : "Injury Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-004"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk of physical harm to the patient."
+    },
+    "id" : "55",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Low",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Low",
+      "en" : "Low"
+    },
+    "comment" : {
+      "en" : "Low likelihood of occurrence."
+    },
+    "id" : "60",
+    "superClasses" : [ "64" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Device",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Device",
+      "en" : "Device"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-007"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-008"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-009"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-025",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-025"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-004"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-005"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-006"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-021",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-021"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-022",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-022"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-023",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-023"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-001"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-002"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-024",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-024"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-020",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-020"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-018",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-018"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-019",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-019"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-016",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-016"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-017",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-017"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-010"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-011"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-013"
+      }
+    } ],
+    "subClasses" : [ "67" ],
+    "comment" : {
+      "en" : "A medical instrument, apparatus, or machine used for healthcare purposes."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#HighRiskIncident",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighRiskIncident",
+      "en" : "High Risk Incident"
+    },
+    "comment" : {
+      "en" : "Incidents associated with critical risks, inferred by rules."
+    },
+    "id" : "73",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InfectionRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InfectionRisk",
+      "en" : "Infection Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-007"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-008"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk of device-related infection or biofilm formation."
+    },
+    "id" : "74",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MaterialRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialRisk",
+      "en" : "Material Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-020",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-020"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-019",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-019"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk associated with the physical materials of the device."
+    },
+    "id" : "75",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ActiveDevice",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveDevice",
+      "en" : "Active Device"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-022",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-022"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-013"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-024",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-024"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-007"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-008"
+      }
+    } ],
+    "comment" : {
+      "en" : "A device dependent on a source of energy other than the human body."
+    },
+    "id" : "78",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InVitroDiagnosticDevice",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InVitroDiagnosticDevice",
+      "en" : "In Vitro Diagnostic Device"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-016",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-016"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-017",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-017"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-020",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-020"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-018",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-018"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-019",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-019"
+      }
+    } ],
+    "comment" : {
+      "en" : "A device used in vitro for the examination of specimens."
+    },
+    "id" : "79",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RegulatoryFramework",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegulatoryFramework",
+      "en" : "Regulatory Framework"
+    },
+    "subClasses" : [ "58", "57" ],
+    "comment" : {
+      "en" : "The set of laws and regulations governing medical device safety."
+    },
+    "id" : "80"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassD",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassD",
+      "en" : "Class D"
+    },
+    "comment" : {
+      "en" : "High individual risk and high public health risk (IVDR)."
+    },
+    "id" : "89",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassC",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassC",
+      "en" : "Class C"
+    },
+    "comment" : {
+      "en" : "Moderate to high individual risk and low to moderate public health risk (IVDR)."
+    },
+    "id" : "90",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DeviceType",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceType",
+      "en" : "Device Type"
+    },
+    "subClasses" : [ "91", "79", "92", "93", "78", "94", "47" ],
+    "comment" : {
+      "en" : "Functional classification of the medical device."
+    },
+    "id" : "48"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CybersecurityRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CybersecurityRisk",
+      "en" : "Cybersecurity Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-018",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-018"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk related to exploitable software vulnerabilities enabling unauthorized access."
+    },
+    "id" : "97",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DeviceSafety",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceSafety",
+      "en" : "Device Safety"
+    },
+    "comment" : {
+      "en" : "Risk category involving compromised safety of the device."
+    },
+    "id" : "100",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ActiveImplantableDevice",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveImplantableDevice",
+      "en" : "Active Implantable Device"
+    },
+    "comment" : {
+      "en" : "Devices that are both active and implantable, inferred by rules."
+    },
+    "id" : "67",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CompletedAction",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompletedAction",
+      "en" : "Completed Action"
+    },
+    "comment" : {
+      "en" : "Corrective actions that have an official closure date."
+    },
+    "id" : "112",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MDR",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MDR",
+      "en" : "MDR"
+    },
+    "comment" : {
+      "en" : "Medical Device Regulation (EU) 2017/745."
+    },
+    "id" : "58",
+    "superClasses" : [ "80" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "119",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "identifier"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "54",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "125",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/date",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "127",
+    "label" : {
+      "IRI-based" : "identifier"
+    }
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIII",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIII",
+      "en" : "Class III"
+    },
+    "comment" : {
+      "en" : "Highest risk class for medical devices."
+    },
+    "id" : "128",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Moderate",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Moderate",
+      "en" : "Moderate"
+    },
+    "comment" : {
+      "en" : "Moderate level of severity."
+    },
+    "id" : "129",
+    "superClasses" : [ "130" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "131",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIIb",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIIb",
+      "en" : "Class IIb"
+    },
+    "comment" : {
+      "en" : "Moderate to high risk class for medical devices."
+    },
+    "id" : "132",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIIa",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIIa",
+      "en" : "Class IIa"
+    },
+    "comment" : {
+      "en" : "Low to moderate risk class for medical devices."
+    },
+    "id" : "133",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "134",
+    "label" : {
+      "IRI-based" : "identifier"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "118",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/date",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "136",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "identifier"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "137",
+    "label" : {
+      "IRI-based" : "identifier"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "id" : "138",
+    "label" : {
+      "IRI-based" : "identifier"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Serious",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Serious",
+      "en" : "Serious"
+    },
+    "comment" : {
+      "en" : "High level of severity involving significant injury or impairment."
+    },
+    "id" : "139",
+    "superClasses" : [ "130" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Critical",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Critical",
+      "en" : "Critical"
+    },
+    "comment" : {
+      "en" : "Highest level of severity representing extreme danger to life."
+    },
+    "id" : "140",
+    "superClasses" : [ "130" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ActiveImplant",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveImplant",
+      "en" : "Active Implant"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-005"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-011"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-023",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-023"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-002"
+      }
+    } ],
+    "comment" : {
+      "en" : "An active medical device intended to be partially or totally implanted."
+    },
+    "id" : "92",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#High",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "High",
+      "en" : "High"
+    },
+    "comment" : {
+      "en" : "High likelihood of occurrence."
+    },
+    "id" : "142",
+    "superClasses" : [ "64" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ActionType",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActionType",
+      "en" : "Action Type"
+    },
+    "subClasses" : [ "35", "36", "33", "32" ],
+    "comment" : {
+      "en" : "The specific category of a Field Safety Corrective Action."
+    },
+    "id" : "82"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "121",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "143",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RiskType",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskType",
+      "en" : "Risk Type"
+    },
+    "subClasses" : [ "75", "88", "45", "97", "25", "55", "145", "146", "147", "74" ],
+    "comment" : {
+      "en" : "The specific nature of the danger represented by a risk."
+    },
+    "id" : "26"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Incident",
+      "en" : "Incident"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-009"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-019",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-019"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-008"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-018",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-018"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-007"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-006"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-017",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-017"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-001"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-011"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-010"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-020",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-020"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-016",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-016"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-005"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-004"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-013"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-002"
+      }
+    } ],
+    "subClasses" : [ "73" ],
+    "comment" : {
+      "en" : "An adverse event or malfunction associated with a medical device."
+    },
+    "id" : "19"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#NearMissIncident",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NearMissIncident",
+      "en" : "Near Miss Incident"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-019",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-019"
+      }
+    } ],
+    "comment" : {
+      "en" : "An incident that did not result in harm but had the potential to do so."
+    },
+    "id" : "41",
+    "superClasses" : [ "148" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Status",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Status",
+      "en" : "Status"
+    },
+    "subClasses" : [ "156", "27" ],
+    "comment" : {
+      "en" : "The current state of a corrective action or investigation process."
+    },
+    "id" : "28"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#IncidentType",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IncidentType",
+      "en" : "Incident Type"
+    },
+    "subClasses" : [ "42", "41" ],
+    "comment" : {
+      "en" : "Classification of the nature and severity of an adverse event."
+    },
+    "id" : "148"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RiskCategory",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskCategory",
+      "en" : "Risk Category"
+    },
+    "subClasses" : [ "163", "164", "165", "50", "166", "100" ],
+    "comment" : {
+      "en" : "A broad grouping of risks based on their origin or impact."
+    },
+    "id" : "51"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SafetyAlert",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SafetyAlert",
+      "undefined" : "Safety Alert"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-004"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-001"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-013"
+      }
+    } ],
+    "comment" : {
+      "en" : "Safety communication issued to users regarding a medical device."
+    },
+    "id" : "36",
+    "superClasses" : [ "82" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DiagnosticError",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiagnosticError",
+      "en" : "Diagnostic Error"
+    },
+    "comment" : {
+      "en" : "Risk category involving incorrect diagnostic results."
+    },
+    "id" : "166",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SelfTestDevice",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SelfTestDevice",
+      "en" : "Self Test Device"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-021",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-021"
+      }
+    } ],
+    "comment" : {
+      "en" : "An IVD device intended to be used by a lay person."
+    },
+    "id" : "93",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CriticalManufacturer",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CriticalManufacturer",
+      "en" : "Critical Manufacturer"
+    },
+    "comment" : {
+      "en" : "Manufacturer involved in incidents with critical severity."
+    },
+    "id" : "170",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DiagnosticRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiagnosticRisk",
+      "en" : "Diagnostic Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-016",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-016"
+      }
+    } ],
+    "comment" : {
+      "en" : "Specific risk type representing potential diagnostic errors."
+    },
+    "id" : "145",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Open",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Open",
+      "en" : "Open"
+    },
+    "comment" : {
+      "en" : "Status indicating that the action is still in progress."
+    },
+    "id" : "156",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DevicePerformance",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DevicePerformance",
+      "en" : "Device Performance"
+    },
+    "comment" : {
+      "en" : "Risk category involving inadequate performance of the device."
+    },
+    "id" : "164",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#UserNotice",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UserNotice",
+      "undefined" : "User Notice"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-009"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-007"
+      }
+    } ],
+    "comment" : {
+      "en" : "Urgent safety notice regarding the proper use of a device."
+    },
+    "id" : "33",
+    "superClasses" : [ "82" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ProductQuality",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductQuality",
+      "en" : "Product Quality"
+    },
+    "comment" : {
+      "en" : "Risk category related to manufacturing or product defects."
+    },
+    "id" : "165",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Manufacturer",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "en" : "Manufacturer"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-013"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-002"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-004"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://dbpedia.org/resource/Roche_Diagnostics",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "MAN-005"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-006"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-007"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-008"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-009"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-010"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-011"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "MAN-001"
+      }
+    } ],
+    "subClasses" : [ "170" ],
+    "comment" : {
+      "en" : "The legal entity responsible for the design and compliance of the medical device."
+    },
+    "id" : "23"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ImplantableActiveDevice",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableActiveDevice",
+      "en" : "Implantable Active Device"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-004"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Implantable device that requires an active energy source."
+    },
+    "id" : "91",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DeviceFailure",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceFailure",
+      "en" : "Device Failure"
+    },
+    "comment" : {
+      "en" : "Risk category involving the breakdown or failure of the device."
+    },
+    "id" : "163",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SoftwareRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoftwareRisk",
+      "en" : "Software Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-010"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk associated with software bugs or malfunctions."
+    },
+    "id" : "88",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InterferenceRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterferenceRisk",
+      "en" : "Interference Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-013"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk of unintended interference."
+    },
+    "id" : "146",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Medium",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Medium",
+      "en" : "Medium"
+    },
+    "comment" : {
+      "en" : "Medium likelihood of occurrence."
+    },
+    "id" : "61",
+    "superClasses" : [ "64" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InSituCorrection",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InSituCorrection",
+      "undefined" : "In Situ Correction"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-011"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-005"
+      }
+    } ],
+    "comment" : {
+      "en" : "Corrective action performed directly on the device in the field."
+    },
+    "id" : "32",
+    "superClasses" : [ "82" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Probability",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Probability",
+      "en" : "Probability"
+    },
+    "subClasses" : [ "60", "142", "61" ],
+    "comment" : {
+      "en" : "The likelihood of a specific risk or hazard occurring."
+    },
+    "id" : "64"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SingleUseDevice",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleUseDevice",
+      "en" : "Single Use Device"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "DEV-006"
+      }
+    } ],
+    "comment" : {
+      "en" : "A device intended to be used on one individual during a single procedure."
+    },
+    "id" : "94",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#IVDR",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IVDR",
+      "en" : "IVDR"
+    },
+    "comment" : {
+      "en" : "In Vitro Diagnostic Regulation (EU) 2017/746."
+    },
+    "id" : "57",
+    "superClasses" : [ "80" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MalfunctionRisk",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MalfunctionRisk",
+      "en" : "Malfunction Risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-001"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-006"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-009"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-002"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "RSK-005"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk type indicating structural or functional failure."
+    },
+    "id" : "147",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CorrectiveAction",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrectiveAction",
+      "en" : "Corrective Action"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-010"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-011"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-009"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-004"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-001"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-002"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-013"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-007"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-008"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-005"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-006"
+      }
+    } ],
+    "subClasses" : [ "112" ],
+    "comment" : {
+      "en" : "Action taken to eliminate the cause of a detected nonconformity or incident."
+    },
+    "id" : "16"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Severity",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Severity",
+      "en" : "Severity"
+    },
+    "subClasses" : [ "129", "139", "140" ],
+    "comment" : {
+      "en" : "The measure of the possible consequences of a hazard."
+    },
+    "id" : "130"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SeriousIncident",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeriousIncident",
+      "en" : "Serious Incident"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-009",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-009"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-008"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-007",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-007"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-018",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-018"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-017",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-017"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-006"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-001",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-001"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-011",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-011"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-010"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-020",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-020"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-005",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-005"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-016",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-016"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-015",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-015"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-004",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-004"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-003",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-003"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-014",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-014"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-002"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-013",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "INC-013"
+      }
+    } ],
+    "comment" : {
+      "en" : "An incident that directly or indirectly led to death or serious injury."
+    },
+    "id" : "42",
+    "superClasses" : [ "148" ]
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RiskClass",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskClass",
+      "en" : "Risk Class"
+    },
+    "subClasses" : [ "89", "90", "128", "132", "133" ],
+    "comment" : {
+      "en" : "Classification of a device based on its risk to patients and users."
+    },
+    "id" : "86"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Recall",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recall",
+      "undefined" : "Recall"
+    },
+    "individuals" : [ {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-010",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-010"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-012",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-012"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-002",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-002"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-008",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-008"
+      }
+    }, {
+      "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-006",
+      "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+      "labels" : {
+        "IRI-based" : "FSCA-006"
+      }
+    } ],
+    "comment" : {
+      "en" : "Action to return a device to the manufacturer."
+    },
+    "id" : "35",
+    "superClasses" : [ "82" ]
+  } ],
+  "property" : [ {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "37",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "59",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "62",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "63",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "120",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "150",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "154",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "155",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "157",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "158",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "159",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "160",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "161",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "167",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "168",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "169",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "171",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "173",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "175",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "179",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "181",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "182",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "184",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "186",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "188",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "189",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "191",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "192",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "193",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "194",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "195",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "196",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "197",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "198",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "200",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "202",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "204",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "206",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "208",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "209",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "210",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "212",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "213",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "215",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "216",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "217",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "218",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "219",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "220",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "221",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "222",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "223",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "224",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "226",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "227",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "228",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "229",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "230",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "231",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "232",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "234",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "235",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "238",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "239",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "240",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "241",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "242",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "243",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "244",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "245",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "246",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "247",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "248",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "249",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "250",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "251",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "252",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "253",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "254",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "255",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "256",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "257",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "258",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "259",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "260",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "261",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "262",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "263",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "264",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "265",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "266",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "267",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "268",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "269",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "270",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "271",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "272",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "273",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "274",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "275",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "276",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "277",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "278",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "279",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "280",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "281",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "282",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "283",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "284",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "285",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "286",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "287",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "288",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "289",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "290",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "291",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "292",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "293",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "294",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "295",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "296",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "297",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "298",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "299",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "300",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "301",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "302",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "303",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "304",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "305",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "306",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "307",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "308",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "309",
+    "type" : "owl:disjointWith"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#intended_purpose",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "intended_purpose",
+      "en" : "intended purpose"
+    },
+    "cardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "en" : "The medical purpose for which the device is intended."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#is_reusable",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "is_reusable",
+      "en" : "is reusable"
+    },
+    "cardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "en" : "Boolean flag indicating if the device is intended for reuse."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#is_active",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "is_active",
+      "en" : "is active"
+    },
+    "cardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "en" : "Boolean flag indicating if the device is active."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#devices_affected",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "devices_affected",
+      "en" : "devices affected"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "The total number of device units affected by a corrective action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasRisk",
+    "inverse" : "21",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasRisk",
+      "en" : "has risk"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Associates an incident with the specific risk it represents."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#authorization_number",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "authorization_number",
+      "en" : "authorization number"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The official authorization or certification number of the manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  }, {
+    "range" : "33",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "36",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "33",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasRiskType",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasRiskType",
+      "en" : "has risk type"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "Specifies the specific nature of the danger represented by a risk."
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "range" : "33",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "42",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#isCorrectiveActionOf",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "isCorrectiveActionOf",
+      "en" : "is corrective action of"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Indicates the incident for which a specific corrective action was implemented."
+    },
+    "attributes" : [ "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#isManufacturerOf",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isManufacturerOf",
+      "en" : "is manufacturer of"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Identifies the medical devices produced by a specific manufacturer."
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "description"
+    },
+    "cardinality" : "1",
+    "domain" : "54",
+    "comment" : {
+      "en" : "A detailed textual narrative explaining the entity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "range" : "58",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "61",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "35",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "range" : "36",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_name",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "risk_name",
+      "en" : "risk name"
+    },
+    "cardinality" : "1",
+    "domain" : "20",
+    "comment" : {
+      "en" : "The descriptive name of the risk."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#is_implantable",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "is_implantable",
+      "en" : "is implantable"
+    },
+    "cardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "en" : "Boolean flag indicating whether the device is designed to be implanted."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasDeviceType",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "hasDeviceType",
+      "en" : "has device type"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Classifies a device, incident, or risk into a specific device functional type."
+    },
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#isRiskOfIncident",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "isRiskOfIncident",
+      "en" : "is risk of incident"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "Associates a specific risk with the incident that materialized it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#patient_sex",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "patient_sex",
+      "en" : "patient sex"
+    },
+    "maxCardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The sex of the patient involved in the incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#outcome",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "outcome",
+      "en" : "outcome"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The result or consequence of the incident for the patient."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "range" : "82",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "82",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "26",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasRiskClass",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "hasRiskClass",
+      "en" : "has risk class"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Indicates the risk classification of a medical device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "85"
+  }, {
+    "range" : "26",
+    "domain" : "88",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#patient_age",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "patient_age",
+      "en" : "patient age"
+    },
+    "maxCardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The age of the patient involved in the incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasReportedByEntity",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasReportedByEntity",
+      "en" : "has reported by entity"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Identifies the manufacturer reporting the incident."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasCategory",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasCategory",
+      "en" : "has category"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "Associates a risk with its broad category."
+    },
+    "attributes" : [ "object" ],
+    "id" : "99"
+  }, {
+    "range" : "48",
+    "domain" : "93",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasCorrectiveAction",
+    "inverse" : "49",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasCorrectiveAction",
+      "en" : "has corrective action"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Links an incident to the corrective action taken to address it."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "102"
+  }, {
+    "range" : "48",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "103"
+  }, {
+    "range" : "48",
+    "domain" : "94",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
+  }, {
+    "range" : "48",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "range" : "82",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "fsca_id",
+      "en" : "fsca id"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "The identifier for the Field Safety Corrective Action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "range" : "82",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "range" : "80",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "range" : "80",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "range" : "48",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "48",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasActionType",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "hasActionType",
+      "en" : "has action type"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Links a corrective action to its specific typology."
+    },
+    "attributes" : [ "object" ],
+    "id" : "115"
+  }, {
+    "range" : "48",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#eudamed_srn",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "118",
+    "label" : {
+      "IRI-based" : "eudamed_srn",
+      "en" : "eudamed srn"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The Single Registration Number for the manufacturer in EUDAMED."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "117"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#eudamed_fsca_ref",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "121",
+    "label" : {
+      "IRI-based" : "eudamed_fsca_ref",
+      "en" : "eudamed fsca ref"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "The reference number for the Field Safety Corrective Action in EUDAMED."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "120"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "closure_date",
+      "en" : "closure date"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "The date when the corrective action was officially closed."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "123"
+  }, {
+    "range" : "7",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#is_ivd",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "131",
+    "label" : {
+      "IRI-based" : "is_ivd",
+      "en" : "is ivd"
+    },
+    "cardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "en" : "Boolean flag indicating if the device is an in vitro diagnostic device."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "detection_date",
+      "en" : "detection date"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The date when the incident or risk was first detected."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "141"
+  }, {
+    "range" : "132",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "range" : "132",
+    "domain" : "128",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "149"
+  }, {
+    "range" : "133",
+    "domain" : "128",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "range" : "86",
+    "domain" : "132",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "range" : "86",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "152"
+  }, {
+    "range" : "128",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "range" : "132",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "154"
+  }, {
+    "range" : "132",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
+  }, {
+    "range" : "133",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "157"
+  }, {
+    "range" : "89",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "158"
+  }, {
+    "range" : "94",
+    "domain" : "93",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
+  }, {
+    "range" : "133",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "160"
+  }, {
+    "range" : "128",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "range" : "86",
+    "domain" : "128",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "device_id",
+      "en" : "device id"
+    },
+    "cardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "en" : "The unique identifier assigned to a specific medical device unit or model."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "167"
+  }, {
+    "range" : "93",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "168"
+  }, {
+    "range" : "94",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "169"
+  }, {
+    "range" : "94",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "171"
+  }, {
+    "range" : "64",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "172"
+  }, {
+    "range" : "94",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "173"
+  }, {
+    "range" : "64",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "174"
+  }, {
+    "range" : "93",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "175"
+  }, {
+    "range" : "64",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "176"
+  }, {
+    "range" : "93",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "177"
+  }, {
+    "range" : "16",
+    "domain" : "112",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "178"
+  }, {
+    "range" : "79",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "179"
+  }, {
+    "range" : "130",
+    "domain" : "129",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "180"
+  }, {
+    "range" : "94",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "181"
+  }, {
+    "range" : "130",
+    "domain" : "139",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "182"
+  }, {
+    "range" : "130",
+    "domain" : "140",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "183"
+  }, {
+    "range" : "79",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "184"
+  }, {
+    "range" : "86",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "185"
+  }, {
+    "range" : "47",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "186"
+  }, {
+    "range" : "86",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "187"
+  }, {
+    "range" : "55",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "188"
+  }, {
+    "range" : "51",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "189"
+  }, {
+    "range" : "23",
+    "domain" : "170",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "190"
+  }, {
+    "range" : "147",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "191"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasProbability",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "hasProbability",
+      "en" : "has probability"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "Indicates the likelihood of a specific risk occurring."
+    },
+    "attributes" : [ "object" ],
+    "id" : "192"
+  }, {
+    "range" : "146",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "193"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "action_date",
+      "en" : "action date"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "The date when the corrective action was initiated."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "194"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#isDeviceInvolvedIn",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "isDeviceInvolvedIn",
+      "en" : "is device involved in"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links a medical device to an incident in which it was involved."
+    },
+    "attributes" : [ "object" ],
+    "id" : "195"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "137",
+    "label" : {
+      "IRI-based" : "imdrf_code",
+      "en" : "imdrf code"
+    },
+    "cardinality" : "1",
+    "domain" : "20",
+    "comment" : {
+      "en" : "The International Medical Device Regulators Forum code associated with the risk."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "196"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#country_reported",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "country_reported",
+      "en" : "country reported"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The country where the incident was reported."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "197"
+  }, {
+    "range" : "45",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "198"
+  }, {
+    "range" : "28",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "199"
+  }, {
+    "range" : "75",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "200"
+  }, {
+    "range" : "148",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "201"
+  }, {
+    "range" : "74",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "202"
+  }, {
+    "range" : "148",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "203"
+  }, {
+    "range" : "88",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "204"
+  }, {
+    "range" : "51",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "205"
+  }, {
+    "range" : "55",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "206"
+  }, {
+    "range" : "51",
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "207"
+  }, {
+    "range" : "74",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "208"
+  }, {
+    "range" : "51",
+    "domain" : "165",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "209"
+  }, {
+    "range" : "147",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "210"
+  }, {
+    "range" : "51",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "211"
+  }, {
+    "range" : "146",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "212"
+  }, {
+    "range" : "51",
+    "domain" : "166",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "213"
+  }, {
+    "range" : "26",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "214"
+  }, {
+    "range" : "19",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "215"
+  }, {
+    "range" : "145",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "216"
+  }, {
+    "range" : "28",
+    "domain" : "156",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "217"
+  }, {
+    "range" : "88",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "218"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "122",
+    "label" : {
+      "IRI-based" : "udi_di",
+      "en" : "udi di"
+    },
+    "cardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "en" : "The Unique Device Identification Device Identifier."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "219"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#corrective_action_taken",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "corrective_action_taken",
+      "en" : "corrective action taken"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "Indicates whether a corrective action has been implemented."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "220"
+  }, {
+    "range" : "45",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "221"
+  }, {
+    "range" : "146",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "222"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "138",
+    "label" : {
+      "IRI-based" : "incident_id",
+      "en" : "incident id"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The unique identifier for the reported incident."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "223"
+  }, {
+    "range" : "55",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "224"
+  }, {
+    "range" : "26",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "225"
+  }, {
+    "range" : "75",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "226"
+  }, {
+    "range" : "26",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "227"
+  }, {
+    "range" : "147",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "228"
+  }, {
+    "range" : "26",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "229"
+  }, {
+    "range" : "97",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "230"
+  }, {
+    "range" : "26",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "231"
+  }, {
+    "range" : "156",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "range" : "26",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "233"
+  }, {
+    "range" : "74",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
+  }, {
+    "range" : "26",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "235"
+  }, {
+    "range" : "145",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "236"
+  }, {
+    "range" : "26",
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "range" : "45",
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "238"
+  }, {
+    "range" : "75",
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "239"
+  }, {
+    "range" : "45",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "240"
+  }, {
+    "range" : "88",
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "241"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#countries_affected",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "countries_affected",
+      "en" : "countries affected"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "A list of countries affected by the corrective action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "242"
+  }, {
+    "range" : "88",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "243"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasIncidentType",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "148",
+    "label" : {
+      "IRI-based" : "hasIncidentType",
+      "en" : "has incident type"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Classifies an incident into a specific type based on severity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "244"
+  }, {
+    "range" : "45",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "245"
+  }, {
+    "range" : "75",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "246"
+  }, {
+    "range" : "45",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "247"
+  }, {
+    "range" : "75",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
+  }, {
+    "range" : "147",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
+  }, {
+    "range" : "88",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "250"
+  }, {
+    "range" : "88",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "251"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "126",
+    "label" : {
+      "IRI-based" : "report_date",
+      "en" : "report date"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The date when the incident was officially reported."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "252"
+  }, {
+    "range" : "45",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
+  }, {
+    "range" : "147",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "254"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "127",
+    "label" : {
+      "IRI-based" : "risk_id",
+      "en" : "risk id"
+    },
+    "cardinality" : "1",
+    "domain" : "20",
+    "comment" : {
+      "en" : "The unique identifier for the risk."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "255"
+  }, {
+    "range" : "146",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "256"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#name",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "125",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The name of the manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "257"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "134",
+    "label" : {
+      "IRI-based" : "manufacturer_id",
+      "en" : "manufacturer id"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The unique identifier for the manufacturer."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "258"
+  }, {
+    "range" : "147",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "259"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#contact_email",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "contact_email",
+      "en" : "contact email"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The contact email address for the manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "260"
+  }, {
+    "range" : "146",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "261"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#country",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "country",
+      "en" : "country"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The country where the manufacturer is based."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "262"
+  }, {
+    "range" : "75",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "263"
+  }, {
+    "range" : "45",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "264"
+  }, {
+    "range" : "75",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "265"
+  }, {
+    "range" : "55",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "266"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasSeverity",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "130",
+    "label" : {
+      "IRI-based" : "hasSeverity",
+      "en" : "has severity"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "Indicates the potential severity of a risk."
+    },
+    "attributes" : [ "object" ],
+    "id" : "267"
+  }, {
+    "range" : "88",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "268"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasDevice",
+    "inverse" : "195",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasDevice",
+      "en" : "has device"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Relates an incident to the specific medical device involved."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "269"
+  }, {
+    "range" : "165",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "270"
+  }, {
+    "range" : "165",
+    "domain" : "166",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "271"
+  }, {
+    "range" : "61",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "272"
+  }, {
+    "range" : "60",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "273"
+  }, {
+    "range" : "50",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "274"
+  }, {
+    "range" : "50",
+    "domain" : "166",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "275"
+  }, {
+    "range" : "165",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "276"
+  }, {
+    "range" : "47",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "277"
+  }, {
+    "range" : "79",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "278"
+  }, {
+    "range" : "93",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "279"
+  }, {
+    "range" : "94",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "280"
+  }, {
+    "range" : "91",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "281"
+  }, {
+    "range" : "47",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "282"
+  }, {
+    "range" : "79",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "283"
+  }, {
+    "range" : "93",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "284"
+  }, {
+    "range" : "92",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "285"
+  }, {
+    "range" : "91",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "286"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#eudamed_incident_ref",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "143",
+    "label" : {
+      "IRI-based" : "eudamed_incident_ref",
+      "en" : "eudamed incident ref"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The reference number for the incident in EUDAMED."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "287"
+  }, {
+    "range" : "50",
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "288"
+  }, {
+    "range" : "166",
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "289"
+  }, {
+    "range" : "166",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "290"
+  }, {
+    "range" : "165",
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "291"
+  }, {
+    "range" : "50",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "292"
+  }, {
+    "range" : "166",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "293"
+  }, {
+    "range" : "100",
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "294"
+  }, {
+    "range" : "165",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "295"
+  }, {
+    "range" : "100",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "296"
+  }, {
+    "range" : "164",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "297"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_name",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "device_name",
+      "en" : "device name"
+    },
+    "cardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "en" : "The commercial or common name of the medical device."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "298"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasManufacturer",
+    "inverse" : "52",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasManufacturer",
+      "en" : "has manufacturer"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links a device to its legal manufacturer."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "299"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#scope",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "119",
+    "label" : {
+      "IRI-based" : "scope",
+      "en" : "scope"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "The scope or affected range of a corrective action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "300"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "136",
+    "label" : {
+      "IRI-based" : "event_date",
+      "en" : "event date"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "en" : "The specific calendar date when the incident occurred."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "301"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasRegulatoryFramework",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "hasRegulatoryFramework",
+      "en" : "has regulatory framework"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links a device to the regulations governing its use."
+    },
+    "attributes" : [ "object" ],
+    "id" : "302"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#competent_authority",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "competent_authority",
+      "en" : "competent authority"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The national regulatory body overseeing the manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "303"
+  }, {
+    "range" : "139",
+    "domain" : "129",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "304"
+  }, {
+    "range" : "88",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "305"
+  }, {
+    "range" : "88",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "306"
+  }, {
+    "iri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasStatus",
+    "baseIri" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasStatus",
+      "en" : "has status"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Defines the current state of a corrective action."
+    },
+    "attributes" : [ "object" ],
+    "id" : "307"
+  }, {
+    "range" : "139",
+    "domain" : "140",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "308"
+  }, {
+    "range" : "129",
+    "domain" : "140",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "309"
+  } ]
+}

@@ -1,0 +1,3060 @@
+@prefix : <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#> .
+
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl> rdf:type owl:Ontology ;
+                                                                              owl:versionIRI <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto-1.0.0.owl> ;
+                                                                              <http://purl.org/dc/elements/1.1/contributor> "UOC - Universitat Oberta de Catalunya"@en ;
+                                                                              <http://purl.org/dc/elements/1.1/creator> "Daniela Garcia Chavero"@en ,
+                                                                                                                        "Johan Marin Chamorro"@en ;
+                                                                              <http://purl.org/dc/elements/1.1/description> "The medical device ontology is designed to structure and represent information about medical devices and post-market surveillance within the European regulatory framework (MDR/IVDR)."@en ;
+                                                                              <http://purl.org/dc/elements/1.1/title> "Medical Device Regulatory and Surveillance Ontology"@en ;
+                                                                              <http://purl.org/dc/terms/abstract> "Ontology detailing medical devices, post-market surveillance, incidents, and field safety corrective actions compliant with EU MDR/IVDR regulations."@en ;
+                                                                              <http://purl.org/dc/terms/bibliographicCitation> "Garcia Chavero, D. and Marin Chamorro, J. Medical Device Regulatory and Surveillance Ontology. 2026."@en ;
+                                                                              <http://purl.org/dc/terms/created> "2026-04-23"@en ;
+                                                                              <http://purl.org/dc/terms/issued> "2026-04-23"@en ;
+                                                                              <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                                                              <http://purl.org/dc/terms/modified> "2026-04-23"@en ;
+                                                                              <http://purl.org/dc/terms/publisher> "FUOC - Fundació Universitat Oberta de Catalunya"@en ;
+                                                                              <http://purl.org/dc/terms/source> <https://eur-lex.europa.eu/eli/reg/2017/745/oj> ;
+                                                                              <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.1000000"@en ;
+                                                                              <http://purl.org/ontology/bibo/status> "Published"@en ;
+                                                                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "mdo"@en ;
+                                                                              <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                                                                              owl:versionInfo "Final Version - PEC2"@en ;
+                                                                              <https://schema.org/citation> "Garcia Chavero, D. and Marin Chamorro, J. Medical Device Regulatory and Surveillance Ontology."@en ;
+                                                                              <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov> ;
+                                                                              <https://schema.org/logo> <https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Small_logo_UOC.svg/3840px-Small_logo_UOC.svg.png> ;
+                                                                              <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/citation
+<https://schema.org/citation> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/logo
+<https://schema.org/logo> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#dcterms_identifier
+xsd:dcterms_identifier rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasActionType
+:hasActionType rdf:type owl:ObjectProperty ;
+               rdfs:domain :CorrectiveAction ;
+               rdfs:range :ActionType ;
+               rdfs:comment "Links a corrective action to its specific typology."@en ;
+               rdfs:label "has action type"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasCategory
+:hasCategory rdf:type owl:ObjectProperty ;
+             rdfs:domain :Risk ;
+             rdfs:range :RiskCategory ;
+             rdfs:comment "Associates a risk with its broad category."@en ;
+             rdfs:label "has category"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasCorrectiveAction
+:hasCorrectiveAction rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :isCorrectiveActionOf ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain :Incident ;
+                     rdfs:range :CorrectiveAction ;
+                     rdfs:comment "Links an incident to the corrective action taken to address it."@en ;
+                     rdfs:label "has corrective action"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasDevice
+:hasDevice rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isDeviceInvolvedIn ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Incident ;
+           rdfs:range :Device ;
+           rdfs:comment "Relates an incident to the specific medical device involved."@en ;
+           rdfs:label "has device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasDeviceType
+:hasDeviceType rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Device
+                                           :Incident
+                                           :Risk
+                                         )
+                           ] ;
+               rdfs:range :DeviceType ;
+               rdfs:comment "Classifies a device, incident, or risk into a specific device functional type."@en ;
+               rdfs:label "has device type"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasIncidentType
+:hasIncidentType rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Incident ;
+                 rdfs:range :IncidentType ;
+                 rdfs:comment "Classifies an incident into a specific type based on severity."@en ;
+                 rdfs:label "has incident type"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasManufacturer
+:hasManufacturer rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isManufacturerOf ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :Device ;
+                 rdfs:range :Manufacturer ;
+                 rdfs:comment "Links a device to its legal manufacturer."@en ;
+                 rdfs:label "has manufacturer"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasProbability
+:hasProbability rdf:type owl:ObjectProperty ;
+                rdfs:domain :Risk ;
+                rdfs:range :Probability ;
+                rdfs:comment "Indicates the likelihood of a specific risk occurring."@en ;
+                rdfs:label "has probability"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasRegulatoryFramework
+:hasRegulatoryFramework rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Device ;
+                        rdfs:range :RegulatoryFramework ;
+                        rdfs:comment "Links a device to the regulations governing its use."@en ;
+                        rdfs:label "has regulatory framework"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasReportedByEntity
+:hasReportedByEntity rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :Incident ;
+                     rdfs:range :Manufacturer ;
+                     rdfs:comment "Identifies the manufacturer reporting the incident."@en ;
+                     rdfs:label "has reported by entity"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasRisk
+:hasRisk rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isRiskOfIncident ;
+         rdf:type owl:FunctionalProperty ;
+         rdfs:domain :Incident ;
+         rdfs:range :Risk ;
+         rdfs:comment "Associates an incident with the specific risk it represents."@en ;
+         rdfs:label "has risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasRiskClass
+:hasRiskClass rdf:type owl:ObjectProperty ;
+              rdfs:domain :Device ;
+              rdfs:range :RiskClass ;
+              rdfs:comment "Indicates the risk classification of a medical device."@en ;
+              rdfs:label "has risk class"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasRiskType
+:hasRiskType rdf:type owl:ObjectProperty ;
+             rdfs:domain :Risk ;
+             rdfs:range :RiskType ;
+             rdfs:comment "Specifies the specific nature of the danger represented by a risk."@en ;
+             rdfs:label "has risk type"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasSeverity
+:hasSeverity rdf:type owl:ObjectProperty ;
+             rdfs:domain :Risk ;
+             rdfs:range :Severity ;
+             rdfs:comment "Indicates the potential severity of a risk."@en ;
+             rdfs:label "has severity"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasStatus
+:hasStatus rdf:type owl:ObjectProperty ;
+           rdfs:domain :CorrectiveAction ;
+           rdfs:range :Status ;
+           rdfs:comment "Defines the current state of a corrective action."@en ;
+           rdfs:label "has status"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#isCorrectiveActionOf
+:isCorrectiveActionOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain :CorrectiveAction ;
+                      rdfs:range :Incident ;
+                      rdfs:comment "Indicates the incident for which a specific corrective action was implemented."@en ;
+                      rdfs:label "is corrective action of"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#isDeviceInvolvedIn
+:isDeviceInvolvedIn rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Device ;
+                    rdfs:range :Incident ;
+                    rdfs:comment "Links a medical device to an incident in which it was involved."@en ;
+                    rdfs:label "is device involved in"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#isManufacturerOf
+:isManufacturerOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Manufacturer ;
+                  rdfs:range :Device ;
+                  rdfs:comment "Identifies the medical devices produced by a specific manufacturer."@en ;
+                  rdfs:label "is manufacturer of"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#isRiskOfIncident
+:isRiskOfIncident rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Risk ;
+                  rdfs:range :Incident ;
+                  rdfs:comment "Associates a specific risk with the incident that materialized it."@en ;
+                  rdfs:label "is risk of incident"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date
+:action_date rdf:type owl:DatatypeProperty ;
+             rdfs:domain :CorrectiveAction ;
+             rdfs:range <http://purl.org/dc/terms/date> ;
+             rdfs:comment "The date when the corrective action was initiated."@en ;
+             rdfs:label "action date"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#authorization_number
+:authorization_number rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Manufacturer ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "The official authorization or certification number of the manufacturer."@en ;
+                      rdfs:label "authorization number"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date
+:closure_date rdf:type owl:DatatypeProperty ;
+              rdfs:domain :CorrectiveAction ;
+              rdfs:range <http://purl.org/dc/terms/date> ;
+              rdfs:comment "The date when the corrective action was officially closed."@en ;
+              rdfs:label "closure date"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#competent_authority
+:competent_authority rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Manufacturer ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The national regulatory body overseeing the manufacturer."@en ;
+                     rdfs:label "competent authority"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#contact_email
+:contact_email rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Manufacturer ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The contact email address for the manufacturer."@en ;
+               rdfs:label "contact email"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#corrective_action_taken
+:corrective_action_taken rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Incident ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:comment "Indicates whether a corrective action has been implemented."@en ;
+                         rdfs:label "corrective action taken"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#countries_affected
+:countries_affected rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :CorrectiveAction ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "A list of countries affected by the corrective action."@en ;
+                    rdfs:label "countries affected"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#country
+:country rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Manufacturer ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The country where the manufacturer is based."@en ;
+         rdfs:label "country"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#country_reported
+:country_reported rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Incident ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The country where the incident was reported."@en ;
+                  rdfs:label "country reported"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range <http://purl.org/dc/terms/description> ;
+             rdfs:comment "A detailed textual narrative explaining the entity."@en ;
+             rdfs:label "description"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date
+:detection_date rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Incident ;
+                rdfs:range <http://purl.org/dc/terms/date> ;
+                rdfs:comment "The date when the incident or risk was first detected."@en ;
+                rdfs:label "detection date"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id
+:device_id rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Device ;
+           rdfs:range <http://purl.org/dc/terms/identifier> ;
+           rdfs:comment "The unique identifier assigned to a specific medical device unit or model."@en ;
+           rdfs:label "device id"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_name
+:device_name rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Device ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The commercial or common name of the medical device."@en ;
+             rdfs:label "device name"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#devices_affected
+:devices_affected rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :CorrectiveAction ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "The total number of device units affected by a corrective action."@en ;
+                  rdfs:label "devices affected"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#eudamed_fsca_ref
+:eudamed_fsca_ref rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :CorrectiveAction ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The reference number for the Field Safety Corrective Action in EUDAMED."@en ;
+                  rdfs:label "eudamed fsca ref"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#eudamed_incident_ref
+:eudamed_incident_ref rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Incident ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "The reference number for the incident in EUDAMED."@en ;
+                      rdfs:label "eudamed incident ref"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#eudamed_srn
+:eudamed_srn rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Manufacturer ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The Single Registration Number for the manufacturer in EUDAMED."@en ;
+             rdfs:label "eudamed srn"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date
+:event_date rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Incident ;
+            rdfs:range <http://purl.org/dc/terms/date> ;
+            rdfs:comment "The specific calendar date when the incident occurred."@en ;
+            rdfs:label "event date"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id
+:fsca_id rdf:type owl:DatatypeProperty ;
+         rdfs:domain :CorrectiveAction ;
+         rdfs:range <http://purl.org/dc/terms/identifier> ;
+         rdfs:comment "The identifier for the Field Safety Corrective Action."@en ;
+         rdfs:label "fsca id"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code
+:imdrf_code rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Risk ;
+            rdfs:range <http://purl.org/dc/terms/identifier> ;
+            rdfs:comment "The International Medical Device Regulators Forum code associated with the risk."@en ;
+            rdfs:label "imdrf code"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id
+:incident_id rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Incident ;
+             rdfs:range <http://purl.org/dc/terms/identifier> ;
+             rdfs:comment "The unique identifier for the reported incident."@en ;
+             rdfs:label "incident id"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#intended_purpose
+:intended_purpose rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Device ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The medical purpose for which the device is intended."@en ;
+                  rdfs:label "intended purpose"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#is_active
+:is_active rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Device ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "Boolean flag indicating if the device is active."@en ;
+           rdfs:label "is active"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#is_implantable
+:is_implantable rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Device ;
+                rdfs:range xsd:boolean ;
+                rdfs:comment "Boolean flag indicating whether the device is designed to be implanted."@en ;
+                rdfs:label "is implantable"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#is_ivd
+:is_ivd rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Device ;
+        rdfs:range xsd:boolean ;
+        rdfs:comment "Boolean flag indicating if the device is an in vitro diagnostic device."@en ;
+        rdfs:label "is ivd"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#is_reusable
+:is_reusable rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Device ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "Boolean flag indicating if the device is intended for reuse."@en ;
+             rdfs:label "is reusable"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id
+:manufacturer_id rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :Manufacturer ;
+                 rdfs:range <http://purl.org/dc/terms/identifier> ;
+                 rdfs:comment "The unique identifier for the manufacturer."@en ;
+                 rdfs:label "manufacturer id"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Manufacturer ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The name of the manufacturer."@en ;
+      rdfs:label "name"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#outcome
+:outcome rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Incident ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The result or consequence of the incident for the patient."@en ;
+         rdfs:label "outcome"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#patient_age
+:patient_age rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Incident ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "The age of the patient involved in the incident."@en ;
+             rdfs:label "patient age"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#patient_sex
+:patient_sex rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Incident ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The sex of the patient involved in the incident."@en ;
+             rdfs:label "patient sex"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date
+:report_date rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Incident ;
+             rdfs:range <http://purl.org/dc/terms/date> ;
+             rdfs:comment "The date when the incident was officially reported."@en ;
+             rdfs:label "report date"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id
+:risk_id rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Risk ;
+         rdfs:range <http://purl.org/dc/terms/identifier> ;
+         rdfs:comment "The unique identifier for the risk."@en ;
+         rdfs:label "risk id"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_name
+:risk_name rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Risk ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The descriptive name of the risk."@en ;
+           rdfs:label "risk name"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#scope
+:scope rdf:type owl:DatatypeProperty ;
+       rdfs:domain :CorrectiveAction ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The scope or affected range of a corrective action."@en ;
+       rdfs:label "scope"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di
+:udi_di rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Device ;
+        rdfs:range <http://purl.org/dc/terms/identifier> ;
+        rdfs:comment "The Unique Device Identification Device Identifier."@en ;
+        rdfs:label "udi di"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ActionType
+:ActionType rdf:type owl:Class ;
+            rdfs:comment "The specific category of a Field Safety Corrective Action."@en ;
+            rdfs:label "Action Type"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ActiveDevice
+:ActiveDevice rdf:type owl:Class ;
+              rdfs:subClassOf :DeviceType ;
+              rdfs:comment "A device dependent on a source of energy other than the human body."@en ;
+              rdfs:label "Active Device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ActiveImplant
+:ActiveImplant rdf:type owl:Class ;
+               rdfs:subClassOf :DeviceType ;
+               rdfs:comment "An active medical device intended to be partially or totally implanted."@en ;
+               rdfs:label "Active Implant"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ActiveImplantableDevice
+:ActiveImplantableDevice rdf:type owl:Class ;
+                         rdfs:subClassOf :Device ;
+                         rdfs:comment "Devices that are both active and implantable, inferred by rules."@en ;
+                         rdfs:label "Active Implantable Device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassC
+:ClassC rdf:type owl:Class ;
+        rdfs:subClassOf :RiskClass .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassD
+:ClassD rdf:type owl:Class ;
+        rdfs:subClassOf :RiskClass .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIII
+:ClassIII rdf:type owl:Class ;
+          rdfs:subClassOf :RiskClass .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIIa
+:ClassIIa rdf:type owl:Class ;
+          rdfs:subClassOf :RiskClass .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIIb
+:ClassIIb rdf:type owl:Class ;
+          rdfs:subClassOf :RiskClass .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Closed
+:Closed rdf:type owl:Class ;
+        rdfs:subClassOf :Status ;
+        owl:disjointWith :Open .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CompletedAction
+:CompletedAction rdf:type owl:Class ;
+                 rdfs:subClassOf :CorrectiveAction ;
+                 rdfs:comment "Corrective actions that have an official closure date."@en ;
+                 rdfs:label "Completed Action"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ContaminationRisk
+:ContaminationRisk rdf:type owl:Class ;
+                   rdfs:subClassOf :RiskType ;
+                   rdfs:comment "Risk of contamination leading to systematic diagnostic errors."@en ;
+                   rdfs:label "Contamination Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CorrectiveAction
+:CorrectiveAction rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :action_date ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:date
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :countries_affected ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :description ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :devices_affected ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:integer
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :eudamed_fsca_ref ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :fsca_id ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :scope ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :closure_date ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:date
+                                  ] ;
+                  rdfs:comment "Action taken to eliminate the cause of a detected nonconformity or incident."@en ;
+                  rdfs:label "Corrective Action"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Critical
+:Critical rdf:type owl:Class ;
+          rdfs:subClassOf :Severity .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CriticalManufacturer
+:CriticalManufacturer rdf:type owl:Class ;
+                      rdfs:subClassOf :Manufacturer ;
+                      rdfs:comment "Manufacturer involved in incidents with critical severity."@en ;
+                      rdfs:label "Critical Manufacturer"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CybersecurityRisk
+:CybersecurityRisk rdf:type owl:Class ;
+                   rdfs:subClassOf :RiskType ;
+                   rdfs:comment "Risk related to exploitable software vulnerabilities enabling unauthorized access."@en ;
+                   rdfs:label "Cybersecurity Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Device
+:Device rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :device_id ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :device_name ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :intended_purpose ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :is_active ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:boolean
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :is_implantable ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:boolean
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :is_ivd ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:boolean
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :is_reusable ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:boolean
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :udi_di ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ;
+        rdfs:comment "A medical instrument, apparatus, or machine used for healthcare purposes."@en ;
+        rdfs:label "Device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DeviceFailure
+:DeviceFailure rdf:type owl:Class ;
+               rdfs:subClassOf :RiskCategory .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DevicePerformance
+:DevicePerformance rdf:type owl:Class ;
+                   rdfs:subClassOf :RiskCategory .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DeviceSafety
+:DeviceSafety rdf:type owl:Class ;
+              rdfs:subClassOf :RiskCategory .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DeviceType
+:DeviceType rdf:type owl:Class ;
+            rdfs:comment "Functional classification of the medical device."@en ;
+            rdfs:label "Device Type"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DiagnosticError
+:DiagnosticError rdf:type owl:Class ;
+                 rdfs:subClassOf :RiskCategory .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DiagnosticRisk
+:DiagnosticRisk rdf:type owl:Class ;
+                rdfs:subClassOf :RiskType ;
+                rdfs:comment "Specific risk type representing potential diagnostic errors."@en ;
+                rdfs:label "Diagnostic Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#High
+:High rdf:type owl:Class ;
+      rdfs:subClassOf :Probability .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#HighRiskIncident
+:HighRiskIncident rdf:type owl:Class ;
+                  rdfs:subClassOf :Incident ;
+                  rdfs:comment "Incidents associated with critical risks, inferred by rules."@en ;
+                  rdfs:label "High Risk Incident"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#IVDR
+:IVDR rdf:type owl:Class ;
+      rdfs:subClassOf :RegulatoryFramework ;
+      owl:disjointWith :MDR .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ImplantableActiveDevice
+:ImplantableActiveDevice rdf:type owl:Class ;
+                         rdfs:subClassOf :DeviceType ;
+                         rdfs:comment "Implantable device that requires an active energy source."@en ;
+                         rdfs:label "Implantable Active Device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ImplantableDevice
+:ImplantableDevice rdf:type owl:Class ;
+                   rdfs:subClassOf :DeviceType ;
+                   rdfs:comment "A device intended to be introduced into the human body."@en ;
+                   rdfs:label "Implantable Device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InSituCorrection
+:InSituCorrection rdf:type owl:Class ;
+                  rdfs:subClassOf :ActionType ;
+                  rdfs:comment "Corrective action performed directly on the device in the field."@en ;
+                  rdfs:label "In Situ Correction" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InVitroDiagnosticDevice
+:InVitroDiagnosticDevice rdf:type owl:Class ;
+                         rdfs:subClassOf :DeviceType ;
+                         rdfs:comment "A device used in vitro for the examination of specimens."@en ;
+                         rdfs:label "In Vitro Diagnostic Device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident
+:Incident rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :corrective_action_taken ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:boolean
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :country_reported ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :description ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :detection_date ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:date
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :eudamed_incident_ref ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :event_date ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:date
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :incident_id ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :outcome ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :report_date ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:date
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :patient_age ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :patient_sex ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ;
+          rdfs:comment "An adverse event or malfunction associated with a medical device."@en ;
+          rdfs:label "Incident"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#IncidentType
+:IncidentType rdf:type owl:Class ;
+              rdfs:comment "Classification of the nature and severity of an adverse event."@en ;
+              rdfs:label "Incident Type"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InfectionRisk
+:InfectionRisk rdf:type owl:Class ;
+               rdfs:subClassOf :RiskType ;
+               rdfs:comment "Risk of device-related infection or biofilm formation."@en ;
+               rdfs:label "Infection Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InjuryRisk
+:InjuryRisk rdf:type owl:Class ;
+            rdfs:subClassOf :RiskType ;
+            rdfs:comment "Risk of physical harm to the patient."@en ;
+            rdfs:label "Injury Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#InterferenceRisk
+:InterferenceRisk rdf:type owl:Class ;
+                  rdfs:subClassOf :RiskType ;
+                  rdfs:comment "Risk of unintended interference."@en ;
+                  rdfs:label "Interference Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Low
+:Low rdf:type owl:Class ;
+     rdfs:subClassOf :Probability .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MDR
+:MDR rdf:type owl:Class ;
+     rdfs:subClassOf :RegulatoryFramework .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MalfunctionRisk
+:MalfunctionRisk rdf:type owl:Class ;
+                 rdfs:subClassOf :RiskType ;
+                 rdfs:comment "Risk type indicating structural or functional failure."@en ;
+                 rdfs:label "Malfunction Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Manufacturer
+:Manufacturer rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :authorization_number ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :competent_authority ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :contact_email ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :country ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :eudamed_srn ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :manufacturer_id ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :name ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ;
+              rdfs:comment "The legal entity responsible for the design and compliance of the medical device."@en ;
+              rdfs:label "Manufacturer"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MaterialRisk
+:MaterialRisk rdf:type owl:Class ;
+              rdfs:subClassOf :RiskType ;
+              rdfs:comment "Risk associated with the physical materials of the device."@en ;
+              rdfs:label "Material Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Medium
+:Medium rdf:type owl:Class ;
+        rdfs:subClassOf :Probability .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Moderate
+:Moderate rdf:type owl:Class ;
+          rdfs:subClassOf :Severity .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#NearMissIncident
+:NearMissIncident rdf:type owl:Class ;
+                  rdfs:subClassOf :IncidentType ;
+                  owl:disjointWith :SeriousIncident ;
+                  rdfs:comment "An incident that did not result in harm but had the potential to do so."@en ;
+                  rdfs:label "Near Miss Incident"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Open
+:Open rdf:type owl:Class ;
+      rdfs:subClassOf :Status .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#PatientHarm
+:PatientHarm rdf:type owl:Class ;
+             rdfs:subClassOf :RiskCategory .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Probability
+:Probability rdf:type owl:Class ;
+             rdfs:comment "The likelihood of a specific risk or hazard occurring."@en ;
+             rdfs:label "Probability"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ProductQuality
+:ProductQuality rdf:type owl:Class ;
+                rdfs:subClassOf :RiskCategory .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RadiationRisk
+:RadiationRisk rdf:type owl:Class ;
+               rdfs:subClassOf :RiskType ;
+               rdfs:comment "Risk associated with unintended ionizing radiation exposure."@en ;
+               rdfs:label "Radiation Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Recall
+:Recall rdf:type owl:Class ;
+        rdfs:subClassOf :ActionType ;
+        rdfs:comment "Action to return a device to the manufacturer."@en ;
+        rdfs:label "Recall" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RegulatoryFramework
+:RegulatoryFramework rdf:type owl:Class ;
+                     rdfs:comment "The set of laws and regulations governing medical device safety."@en ;
+                     rdfs:label "Regulatory Framework"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :description ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :imdrf_code ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :risk_id ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :risk_name ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ;
+      rdfs:comment "A potential source of harm or adverse health effect associated with a device."@en ;
+      rdfs:label "Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RiskCategory
+:RiskCategory rdf:type owl:Class ;
+              rdfs:comment "A broad grouping of risks based on their origin or impact."@en ;
+              rdfs:label "Risk Category"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RiskClass
+:RiskClass rdf:type owl:Class ;
+           rdfs:comment "Classification of a device based on its risk to patients and users."@en ;
+           rdfs:label "Risk Class"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RiskType
+:RiskType rdf:type owl:Class ;
+          rdfs:comment "The specific nature of the danger represented by a risk."@en ;
+          rdfs:label "Risk Type"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SafetyAlert
+:SafetyAlert rdf:type owl:Class ;
+             rdfs:subClassOf :ActionType ;
+             rdfs:comment "Safety communication issued to users regarding a medical device."@en ;
+             rdfs:label "Safety Alert" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SelfTestDevice
+:SelfTestDevice rdf:type owl:Class ;
+                rdfs:subClassOf :DeviceType ;
+                rdfs:comment "An IVD device intended to be used by a lay person."@en ;
+                rdfs:label "Self Test Device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Serious
+:Serious rdf:type owl:Class ;
+         rdfs:subClassOf :Severity .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SeriousIncident
+:SeriousIncident rdf:type owl:Class ;
+                 rdfs:subClassOf :IncidentType ;
+                 rdfs:comment "An incident that directly or indirectly led to death or serious injury."@en ;
+                 rdfs:label "Serious Incident"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Severity
+:Severity rdf:type owl:Class ;
+          rdfs:comment "The measure of the possible consequences of a hazard."@en ;
+          rdfs:label "Severity"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SingleUseDevice
+:SingleUseDevice rdf:type owl:Class ;
+                 rdfs:subClassOf :DeviceType ;
+                 rdfs:comment "A device intended to be used on one individual during a single procedure."@en ;
+                 rdfs:label "Single Use Device"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#SoftwareRisk
+:SoftwareRisk rdf:type owl:Class ;
+              rdfs:subClassOf :RiskType ;
+              rdfs:comment "Risk associated with software bugs or malfunctions."@en ;
+              rdfs:label "Software Risk"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Status
+:Status rdf:type owl:Class ;
+        rdfs:comment "The current state of a corrective action or investigation process."@en ;
+        rdfs:label "Status"@en .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#UserNotice
+:UserNotice rdf:type owl:Class ;
+            rdfs:subClassOf :ActionType ;
+            rdfs:comment "Urgent safety notice regarding the proper use of a device."@en ;
+            rdfs:label "User Notice" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/Abbott_Laboratories
+<http://dbpedia.org/resource/Abbott_Laboratories> rdf:type owl:NamedIndividual ;
+                                                  owl:sameAs :MAN-002 .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-002
+
+###  http://dbpedia.org/resource/Medtronic
+<http://dbpedia.org/resource/Medtronic> rdf:type owl:NamedIndividual ;
+                                        owl:sameAs :MAN-001 .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-001
+
+###  http://dbpedia.org/resource/Siemens_Healthineers
+<http://dbpedia.org/resource/Siemens_Healthineers> rdf:type owl:NamedIndividual ;
+                                                   owl:sameAs :MAN-003 .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-003
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassC
+:ClassC rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassD
+:ClassD rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIII
+:ClassIII rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIIa
+:ClassIIa rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ClassIIb
+:ClassIIb rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Closed
+:Closed rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Critical
+:Critical rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-001
+:DEV-001 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :ImplantableActiveDevice ;
+         :hasManufacturer :MAN-001 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-001" ;
+         :device_name "HeartMate 3 LVAD" ;
+         :intended_purpose "Ventricular assist device for end-stage heart failure" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)00380740009095" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-002
+:DEV-002 rdf:type owl:NamedIndividual ,
+                  :ActiveImplant ,
+                  :Device ;
+         :hasManufacturer :MAN-001 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-002" ;
+         :device_name "Micra AV Transcatheter Pacing System" ;
+         :intended_purpose "Leadless cardiac pacemaker for atrioventricular synchrony" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)00380740009112" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-003
+:DEV-003 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :ImplantableDevice ;
+         :hasManufacturer :MAN-002 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-003" ;
+         :device_name "Portico Transcatheter Heart Valve" ;
+         :intended_purpose "Transcatheter aortic valve replacement (TAVI)" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)00800002222291" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-004
+:DEV-004 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :ImplantableActiveDevice ;
+         :hasManufacturer :MAN-006 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIb ;
+         :device_id "DEV-004" ;
+         :device_name "SYNERGY Stent System" ;
+         :intended_purpose "Drug-eluting coronary stent" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)08714729002817" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-005
+:DEV-005 rdf:type owl:NamedIndividual ,
+                  :ActiveImplant ,
+                  :Device ;
+         :hasManufacturer :MAN-006 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-005" ;
+         :device_name "ACUITY X4 Quadripolar LV Lead" ;
+         :intended_purpose "Cardiac resynchronization therapy lead" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)08714729004873" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-006
+:DEV-006 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :SingleUseDevice ;
+         :hasManufacturer :MAN-004 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIb ;
+         :device_id "DEV-006" ;
+         :device_name "STELLAREX Drug-Coated Balloon" ;
+         :intended_purpose "Peripheral artery drug-coated angioplasty balloon" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)08718998000001" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-007
+:DEV-007 rdf:type owl:NamedIndividual ,
+                  :ActiveDevice ,
+                  :Device ;
+         :hasManufacturer :MAN-003 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIa ;
+         :device_id "DEV-007" ;
+         :device_name "ACUSON Sequoia Ultrasound" ;
+         :intended_purpose "Diagnostic ultrasound imaging system" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)04054839450001" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-008
+:DEV-008 rdf:type owl:NamedIndividual ,
+                  :ActiveDevice ,
+                  :Device ;
+         :hasManufacturer :MAN-003 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIa ;
+         :device_id "DEV-008" ;
+         :device_name "MAGNETOM Vida MRI System" ;
+         :intended_purpose "Magnetic resonance imaging system 3T" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)04054839460002" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-009
+:DEV-009 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :ImplantableDevice ;
+         :hasManufacturer :MAN-010 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-009" ;
+         :device_name "Persona Knee System" ;
+         :intended_purpose "Total knee arthroplasty implant system" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)07612345001001" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-010
+:DEV-010 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :ImplantableDevice ;
+         :hasManufacturer :MAN-007 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-010" ;
+         :device_name "TRITON Total Hip System" ;
+         :intended_purpose "Ceramic-on-ceramic total hip replacement" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)09876543002002" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-011
+:DEV-011 rdf:type owl:NamedIndividual ,
+                  :ActiveImplant ,
+                  :Device ;
+         :hasManufacturer :MAN-011 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-011" ;
+         :device_name "Iluvien Intravitreal Implant" ;
+         :intended_purpose "Sustained-release fluocinolone acetonide ocular implant" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)05391520001011" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-012
+:DEV-012 rdf:type owl:NamedIndividual ,
+                  :ActiveImplant ,
+                  :Device ;
+         :hasManufacturer :MAN-008 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-012" ;
+         :device_name "Viva Cardiac Resynchronization Defibrillator" ;
+         :intended_purpose "Cardiac resynchronization therapy with defibrillation" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)04012099001012" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-013
+:DEV-013 rdf:type owl:NamedIndividual ,
+                  :ActiveDevice ,
+                  :Device ;
+         :hasManufacturer :MAN-012 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIb ;
+         :device_id "DEV-013" ;
+         :device_name "ATERA Mechanical Ventilator" ;
+         :intended_purpose "ICU mechanical ventilator with pressure and volume modes" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)04046539001013" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-014
+:DEV-014 rdf:type owl:NamedIndividual ,
+                  :ActiveDevice ,
+                  :Device ;
+         :hasManufacturer :MAN-004 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIa ;
+         :device_id "DEV-014" ;
+         :device_name "Lumify Portable Ultrasound" ;
+         :intended_purpose "Handheld point-of-care ultrasound probe" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)08718998001014" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-015
+:DEV-015 rdf:type owl:NamedIndividual ,
+                  :ActiveDevice ,
+                  :Device ;
+         :hasManufacturer :MAN-013 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIb ;
+         :device_id "DEV-015" ;
+         :device_name "Hemodialysis Machine 5008S" ;
+         :intended_purpose "High-volume online hemodiafiltration machine" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)04547597001015" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-016
+:DEV-016 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :InVitroDiagnosticDevice ;
+         :hasManufacturer :MAN-005 ;
+         :hasRegulatoryFramework :IVDR ;
+         :hasRiskClass :ClassC ;
+         :device_id "DEV-016" ;
+         :device_name "cobas e 801 Immunoassay Analyzer" ;
+         :intended_purpose "Automated immunoassay analyzer for clinical laboratory" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "true"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)04015630001016" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-017
+:DEV-017 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :InVitroDiagnosticDevice ;
+         :hasManufacturer :MAN-005 ;
+         :hasRegulatoryFramework :IVDR ;
+         :hasRiskClass :ClassC ;
+         :device_id "DEV-017" ;
+         :device_name "cobas SARS-CoV-2 RT-PCR Test" ;
+         :intended_purpose "Molecular diagnostic test for SARS-CoV-2 detection" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "true"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)04015630001017" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-018
+:DEV-018 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :InVitroDiagnosticDevice ;
+         :hasManufacturer :MAN-015 ;
+         :hasRegulatoryFramework :IVDR ;
+         :hasRiskClass :ClassD ;
+         :device_id "DEV-018" ;
+         :device_name "VIDAS HIV DUO Ultra" ;
+         :intended_purpose "Combined HIV Ag/Ab detection assay" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "true"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)03760027001018" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-019
+:DEV-019 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :InVitroDiagnosticDevice ;
+         :hasManufacturer :MAN-014 ;
+         :hasRegulatoryFramework :IVDR ;
+         :hasRiskClass :ClassC ;
+         :device_id "DEV-019" ;
+         :device_name "PROGENSA PCA3 Assay" ;
+         :intended_purpose "Urine-based prostate cancer diagnosis assay" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "true"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)07000087001019" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-020
+:DEV-020 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :InVitroDiagnosticDevice ;
+         :hasManufacturer :MAN-002 ;
+         :hasRegulatoryFramework :IVDR ;
+         :hasRiskClass :ClassD ;
+         :device_id "DEV-020" ;
+         :device_name "Harmony Prenatal Test" ;
+         :intended_purpose "Non-invasive prenatal testing (NIPT) for aneuploidies" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "true"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)00800002001020" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-021
+:DEV-021 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :SelfTestDevice ;
+         :hasManufacturer :MAN-009 ;
+         :hasRegulatoryFramework :IVDR ;
+         :hasRiskClass :ClassC ;
+         :device_id "DEV-021" ;
+         :device_name "OPTIGA Glucose Monitoring System" ;
+         :intended_purpose "Continuous glucose monitor for patients with diabetes" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "true"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)07300000001021" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-022
+:DEV-022 rdf:type owl:NamedIndividual ,
+                  :ActiveDevice ,
+                  :Device ;
+         :hasManufacturer :MAN-009 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIa ;
+         :device_id "DEV-022" ;
+         :device_name "BeneVision N1 Patient Monitor" ;
+         :intended_purpose "Portable patient monitor for vital signs" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)07300000001022" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-023
+:DEV-023 rdf:type owl:NamedIndividual ,
+                  :ActiveImplant ,
+                  :Device ;
+         :hasManufacturer :MAN-008 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-023" ;
+         :device_name "Tivoli II Cochlear Implant" ;
+         :intended_purpose "Active cochlear implant for sensorineural hearing loss" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)04012099001023" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-024
+:DEV-024 rdf:type owl:NamedIndividual ,
+                  :ActiveDevice ,
+                  :Device ;
+         :hasManufacturer :MAN-002 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIIb ;
+         :device_id "DEV-024" ;
+         :device_name "Infusion Pump Plum 360" ;
+         :intended_purpose "Large volume infusion pump with drug library" ;
+         :is_active "true"^^xsd:boolean ;
+         :is_implantable "false"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "true"^^xsd:boolean ;
+         :udi_di "(01)00800002001024" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DEV-025
+:DEV-025 rdf:type owl:NamedIndividual ,
+                  :Device ,
+                  :ImplantableDevice ;
+         :hasManufacturer :MAN-011 ;
+         :hasRegulatoryFramework :MDR ;
+         :hasRiskClass :ClassIII ;
+         :device_id "DEV-025" ;
+         :device_name "ValveXpert Transcatheter Mitral Valve" ;
+         :intended_purpose "Transcatheter mitral valve replacement system" ;
+         :is_active "false"^^xsd:boolean ;
+         :is_implantable "true"^^xsd:boolean ;
+         :is_ivd "false"^^xsd:boolean ;
+         :is_reusable "false"^^xsd:boolean ;
+         :udi_di "(01)05391520001025" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DeviceFailure
+:DeviceFailure rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DevicePerformance
+:DevicePerformance rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DeviceSafety
+:DeviceSafety rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#DiagnosticError
+:DiagnosticError rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-001
+:FSCA-001 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :SafetyAlert ;
+          :hasStatus :Open ;
+          :action_date "2024-02-01"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0." ;
+          :devices_affected 850 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000001" ;
+          :fsca_id "FSCA-001" ;
+          :scope "All HeartMate 3 LVAD units implanted since 2020" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-002
+:FSCA-002 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :Recall ;
+          :hasStatus :Closed ;
+          :action_date "2024-02-28"^^xsd:date ;
+          :closure_date "2024-05-31"^^xsd:date ;
+          :countries_affected "EU-wide + UK" ;
+          :description "Voluntary recall of affected Micra AV lots due to premature battery depletion. Replacement units provided. 97% of affected devices successfully replaced." ;
+          :devices_affected 1240 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000002" ;
+          :fsca_id "FSCA-002" ;
+          :scope "Micra AV lots manufactured between 2022-09 and 2023-03" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-003
+:FSCA-003 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :InSituCorrection ;
+          :hasStatus :Closed ;
+          :action_date "2024-03-15"^^xsd:date ;
+          :closure_date "2024-06-30"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Enhanced deployment training and updated IFU for Portico valve implantation technique. New implantation checklist mandatory for all TAVI centres." ;
+          :devices_affected 320 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000003" ;
+          :fsca_id "FSCA-003" ;
+          :scope "Portico THV sizes 23mm and 25mm from lots before 2023-11" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-004
+:FSCA-004 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :SafetyAlert ;
+          :hasStatus :Open ;
+          :action_date "2024-04-10"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Safety communication to implanting cardiologists regarding optimal fixation technique for ACUITY X4 lead. Enhanced fluoroscopy verification protocol at implantation." ;
+          :devices_affected 2100 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000004" ;
+          :fsca_id "FSCA-004" ;
+          :scope "All ACUITY X4 quadripolar LV leads" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-005
+:FSCA-005 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :InSituCorrection ;
+          :hasStatus :Closed ;
+          :action_date "2024-05-20"^^xsd:date ;
+          :closure_date "2024-09-30"^^xsd:date ;
+          :countries_affected "EU-wide + Switzerland" ;
+          :description "Enhanced surveillance programme: annual DEXA scan and serum particle monitoring for patients with affected tibial inserts. Patients contacted individually." ;
+          :devices_affected 780 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000005" ;
+          :fsca_id "FSCA-005" ;
+          :scope "Persona Knee tibial inserts with lot numbers PN-2019-* to PN-2021-*" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-006
+:FSCA-006 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :Recall ;
+          :hasStatus :Open ;
+          :action_date "2024-05-30"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Urgent safety recall due to elevated metal ion levels. Revision surgery recommended for patients with serum cobalt >7 ppb or symptomatic ALTR. Replacement implants provided." ;
+          :devices_affected 540 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000006" ;
+          :fsca_id "FSCA-006" ;
+          :scope "TRITON Total Hip ceramic-on-ceramic 28mm heads from lots TH-2020-* and TH-2021-*" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-007
+:FSCA-007 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :UserNotice ;
+          :hasStatus :Closed ;
+          :action_date "2024-05-25"^^xsd:date ;
+          :closure_date "2024-07-31"^^xsd:date ;
+          :countries_affected "EU-wide + UK" ;
+          :description "Urgent safety notice regarding MRI scanning protocol. Updated MRI-conditional guidelines issued. Mandatory reprogramming required before any MRI scan. Programmer software update v3.2 released." ;
+          :devices_affected 4300 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000007" ;
+          :fsca_id "FSCA-007" ;
+          :scope "All Viva CRT-D devices" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-008
+:FSCA-008 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :Recall ;
+          :hasStatus :Closed ;
+          :action_date "2024-06-05"^^xsd:date ;
+          :closure_date "2024-08-15"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Software recall: mandatory update to version 2.2.0 resolving FiO2 calibration error. Biomedical engineers visited all affected units within 14 days. Field service documentation required." ;
+          :devices_affected 180 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000008" ;
+          :fsca_id "FSCA-008" ;
+          :scope "ATERA ventilators with software version 2.1.3" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-009
+:FSCA-009 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :UserNotice ;
+          :hasStatus :Closed ;
+          :action_date "2024-06-20"^^xsd:date ;
+          :closure_date "2024-09-30"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Customer field notification regarding biotin interference in TSH assay. Updated sample preparation protocol and interference screening algorithm released via software update 4.1.2." ;
+          :devices_affected 620 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000009" ;
+          :fsca_id "FSCA-009" ;
+          :scope "All cobas e 801 immunoassay analysers" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-010
+:FSCA-010 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :Recall ;
+          :hasStatus :Closed ;
+          :action_date "2024-06-30"^^xsd:date ;
+          :closure_date "2024-08-31"^^xsd:date ;
+          :countries_affected "EU-wide + Norway + Iceland" ;
+          :description "Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued. All positive results from affected lots to be re-confirmed. New primer design covering BA.2.86 released." ;
+          :devices_affected 12500 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000010" ;
+          :fsca_id "FSCA-010" ;
+          :scope "cobas SARS-CoV-2 RT-PCR reagent lot numbers CV-2024-0312 to CV-2024-0318" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-011
+:FSCA-011 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :InSituCorrection ;
+          :hasStatus :Open ;
+          :action_date "2024-08-01"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Enhanced calibration protocol issued. Firmware update v1.8.5 mandatory improving temperature compensation algorithm. Patients instructed to perform confirmatory finger-stick at glucose readings <4.5 or >13.9 mmol/L." ;
+          :devices_affected 3200 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000011" ;
+          :fsca_id "FSCA-011" ;
+          :scope "All OPTIGA CGM sensors from manufacturing site GE-SGP-2" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-012
+:FSCA-012 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :Recall ;
+          :hasStatus :Closed ;
+          :action_date "2024-08-20"^^xsd:date ;
+          :closure_date "2024-10-31"^^xsd:date ;
+          :countries_affected "EU-wide + UK + Norway" ;
+          :description "Urgent recall and remote software update. Drug library version 4.3.0 deployed correcting decimal point error. All units verified by biomedical engineering before return to clinical use." ;
+          :devices_affected 2870 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000012" ;
+          :fsca_id "FSCA-012" ;
+          :scope "Plum 360 infusion pumps with drug library version 4.2.1" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-013
+:FSCA-013 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :SafetyAlert ;
+          :hasStatus :Open ;
+          :action_date "2024-09-10"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Safety communication regarding outflow graft kinking risk. Updated surgical technique for graft routing issued. Mandatory follow-up CT at 6 months for patients with affected lot numbers." ;
+          :devices_affected 420 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000013" ;
+          :fsca_id "FSCA-013" ;
+          :scope "All HeartMate 3 LVAD units with outflow graft lot OG-2022-*" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-014
+:FSCA-014 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :UserNotice ;
+          :hasStatus :Closed ;
+          :action_date "2024-09-25"^^xsd:date ;
+          :closure_date "2024-12-31"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Updated IFU regarding post-operative infection prophylaxis protocol. Extended topical antibiotic course (14 days) mandatory post-insertion. Healthcare professionals notified via direct mail and implanting centre visits." ;
+          :devices_affected 1100 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000014" ;
+          :fsca_id "FSCA-014" ;
+          :scope "All Iluvien intravitreal implants" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#FSCA-015
+:FSCA-015 rdf:type owl:NamedIndividual ,
+                   :CorrectiveAction ,
+                   :InSituCorrection ;
+          :hasStatus :Open ;
+          :action_date "2024-10-01"^^xsd:date ;
+          :countries_affected "EU-wide" ;
+          :description "Security patch 3.0.1 mandatory deployment disabling unrestricted web interface access. Network segmentation guidance issued to hospital IT departments. Penetration test report provided to competent authorities." ;
+          :devices_affected 890 ;
+          :eudamed_fsca_ref "EU-FSCA-2024-000015" ;
+          :fsca_id "FSCA-015" ;
+          :scope "All 5008S hemodialysis machines with network connectivity module v2.x" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#High
+:High rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-001
+:INC-001 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-001 ;
+         :hasDevice :DEV-001 ;
+         :hasReportedByEntity :MAN-001 ;
+         :hasRisk :RSK-003 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Germany" ;
+         :description "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography." ;
+         :detection_date "2024-01-10"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000001" ;
+         :event_date "2024-01-08"^^xsd:date ;
+         :incident_id "INC-001" ;
+         :outcome "Serious patient injury - embolic stroke" ;
+         :patient_age 58 ;
+         :patient_sex "Male" ;
+         :report_date "2024-01-15"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-002
+:INC-002 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-002 ;
+         :hasDevice :DEV-002 ;
+         :hasReportedByEntity :MAN-001 ;
+         :hasRisk :RSK-009 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "France" ;
+         :description "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification." ;
+         :detection_date "2024-02-01"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000002" ;
+         :event_date "2024-01-29"^^xsd:date ;
+         :incident_id "INC-002" ;
+         :outcome "Device malfunction - premature battery depletion" ;
+         :patient_age 72 ;
+         :patient_sex "Female" ;
+         :report_date "2024-02-03"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-003
+:INC-003 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-003 ;
+         :hasDevice :DEV-003 ;
+         :hasReportedByEntity :MAN-002 ;
+         :hasRisk :RSK-005 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Italy" ;
+         :description "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure." ;
+         :detection_date "2024-02-18"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000003" ;
+         :event_date "2024-02-15"^^xsd:date ;
+         :incident_id "INC-003" ;
+         :outcome "Surgical intervention required - valve re-anchoring" ;
+         :patient_age 67 ;
+         :patient_sex "Male" ;
+         :report_date "2024-02-20"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-004
+:INC-004 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasDevice :DEV-004 ;
+         :hasReportedByEntity :MAN-006 ;
+         :hasRisk :RSK-002 ;
+         :corrective_action_taken "false"^^xsd:boolean ;
+         :country_reported "Spain" ;
+         :description "SYNERGY stent fracture detected on angiography 18 months post-implant causing in-stent restenosis." ;
+         :detection_date "2024-03-03"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000004" ;
+         :event_date "2024-02-28"^^xsd:date ;
+         :incident_id "INC-004" ;
+         :outcome "Device malfunction - stent fracture" ;
+         :patient_age 55 ;
+         :patient_sex "Female" ;
+         :report_date "2024-03-05"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-005
+:INC-005 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-004 ;
+         :hasDevice :DEV-005 ;
+         :hasReportedByEntity :MAN-006 ;
+         :hasRisk :RSK-006 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Netherlands" ;
+         :description "ACUITY X4 lead dislodgement to right ventricle requiring fluoroscopy-guided repositioning." ;
+         :detection_date "2024-03-16"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000005" ;
+         :event_date "2024-03-12"^^xsd:date ;
+         :incident_id "INC-005" ;
+         :outcome "Surgical intervention required - lead extraction" ;
+         :patient_age 63 ;
+         :patient_sex "Male" ;
+         :report_date "2024-03-18"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-006
+:INC-006 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasDevice :DEV-007 ;
+         :hasReportedByEntity :MAN-003 ;
+         :hasRisk :RSK-001 ;
+         :corrective_action_taken "false"^^xsd:boolean ;
+         :country_reported "Belgium" ;
+         :description "ACUSON Sequoia ultrasound system froze mid-examination. Emergency shutdown required; patient examination incomplete." ;
+         :detection_date "2024-04-01"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000006" ;
+         :event_date "2024-04-01"^^xsd:date ;
+         :incident_id "INC-006" ;
+         :outcome "Device malfunction - complete system failure" ;
+         :report_date "2024-04-02"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-007
+:INC-007 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-005 ;
+         :hasDevice :DEV-009 ;
+         :hasReportedByEntity :MAN-010 ;
+         :hasRisk :RSK-019 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Sweden" ;
+         :description "Persona knee tibial insert showing accelerated polyethylene wear with metallosis confirmed at 3-year revision surgery." ;
+         :detection_date "2024-04-10"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000007" ;
+         :event_date "2024-03-01"^^xsd:date ;
+         :incident_id "INC-007" ;
+         :outcome "Patient harm - adverse tissue reaction" ;
+         :patient_age 70 ;
+         :patient_sex "Male" ;
+         :report_date "2024-04-14"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-008
+:INC-008 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-006 ;
+         :hasDevice :DEV-010 ;
+         :hasReportedByEntity :MAN-007 ;
+         :hasRisk :RSK-020 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Denmark" ;
+         :description "TRITON hip patient presented with elevated serum cobalt (18 ppb). Adverse local tissue reaction (ALTR) confirmed by MRI." ;
+         :detection_date "2024-04-25"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000008" ;
+         :event_date "2024-04-20"^^xsd:date ;
+         :incident_id "INC-008" ;
+         :outcome "Patient harm - cobalt toxicity" ;
+         :patient_age 65 ;
+         :patient_sex "Female" ;
+         :report_date "2024-04-28"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-009
+:INC-009 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-007 ;
+         :hasDevice :DEV-012 ;
+         :hasReportedByEntity :MAN-008 ;
+         :hasRisk :RSK-013 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Poland" ;
+         :description "Viva CRT-D delivered inappropriate ICD therapy during MRI scan despite MRI-conditional programming. Patient experienced pain and syncope." ;
+         :detection_date "2024-05-04"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000009" ;
+         :event_date "2024-05-03"^^xsd:date ;
+         :incident_id "INC-009" ;
+         :outcome "Inappropriate shock delivery" ;
+         :patient_age 68 ;
+         :patient_sex "Male" ;
+         :report_date "2024-05-06"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-010
+:INC-010 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-008 ;
+         :hasDevice :DEV-013 ;
+         :hasReportedByEntity :MAN-012 ;
+         :hasRisk :RSK-010 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Germany" ;
+         :description "ATERA ventilator software version 2.1.3 delivered FiO2 6% lower than set value for patients in ARDS protocol. 3 patients affected." ;
+         :detection_date "2024-05-19"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000010" ;
+         :event_date "2024-05-19"^^xsd:date ;
+         :incident_id "INC-010" ;
+         :outcome "Device malfunction - incorrect FiO2 delivery" ;
+         :report_date "2024-05-20"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-011
+:INC-011 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-009 ;
+         :hasDevice :DEV-016 ;
+         :hasReportedByEntity :MAN-005 ;
+         :hasRisk :RSK-014 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "France" ;
+         :description "cobas e 801 thyroid-stimulating hormone (TSH) assay reported false positive results (>10 mIU/L) in 12 euthyroid patients due to biotin interference." ;
+         :detection_date "2024-06-01"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000011" ;
+         :event_date "2024-05-28"^^xsd:date ;
+         :incident_id "INC-011" ;
+         :outcome "Diagnostic error - false positive TSH results" ;
+         :report_date "2024-06-03"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-012
+:INC-012 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-010 ;
+         :hasDevice :DEV-017 ;
+         :hasReportedByEntity :MAN-005 ;
+         :hasRisk :RSK-015 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Spain" ;
+         :description "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing. Lot-specific issue." ;
+         :detection_date "2024-06-13"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000012" ;
+         :event_date "2024-06-10"^^xsd:date ;
+         :incident_id "INC-012" ;
+         :outcome "Diagnostic error - false negative SARS-CoV-2" ;
+         :report_date "2024-06-15"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-013
+:INC-013 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasDevice :DEV-018 ;
+         :hasReportedByEntity :MAN-015 ;
+         :hasRisk :RSK-015 ;
+         :corrective_action_taken "false"^^xsd:boolean ;
+         :country_reported "Germany" ;
+         :description "VIDAS HIV DUO Ultra failed to detect HIV-1 group O infection in seroconversion panel. Patient missed early treatment window." ;
+         :detection_date "2024-06-29"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000013" ;
+         :event_date "2024-06-25"^^xsd:date ;
+         :incident_id "INC-013" ;
+         :outcome "Diagnostic error - false negative HIV" ;
+         :report_date "2024-07-01"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-014
+:INC-014 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-011 ;
+         :hasDevice :DEV-021 ;
+         :hasReportedByEntity :MAN-009 ;
+         :hasRisk :RSK-014 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Netherlands" ;
+         :description "OPTIGA CGM sensor reported glucose 3.8 mmol/L while laboratory reference showed 14.2 mmol/L. Patient delayed insulin administration." ;
+         :detection_date "2024-07-15"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000014" ;
+         :event_date "2024-07-10"^^xsd:date ;
+         :incident_id "INC-014" ;
+         :outcome "Patient harm - hyperglycaemic event" ;
+         :patient_age 45 ;
+         :patient_sex "Female" ;
+         :report_date "2024-07-18"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-015
+:INC-015 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-012 ;
+         :hasDevice :DEV-024 ;
+         :hasReportedByEntity :MAN-002 ;
+         :hasRisk :RSK-010 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Italy" ;
+         :description "Plum 360 infusion pump delivered 10x heparin dose due to software decimal point error in drug library version 4.2.1." ;
+         :detection_date "2024-08-04"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000015" ;
+         :event_date "2024-08-04"^^xsd:date ;
+         :incident_id "INC-015" ;
+         :outcome "Patient harm - drug overdose" ;
+         :patient_age 81 ;
+         :patient_sex "Female" ;
+         :report_date "2024-08-05"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-016
+:INC-016 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-013 ;
+         :hasDevice :DEV-001 ;
+         :hasReportedByEntity :MAN-001 ;
+         :hasRisk :RSK-004 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "United Kingdom" ;
+         :description "HeartMate 3 patient developed severe haemolysis (LDH >2000 U/L) associated with outflow graft kinking confirmed by CT." ;
+         :detection_date "2024-08-18"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000016" ;
+         :event_date "2024-08-15"^^xsd:date ;
+         :incident_id "INC-016" ;
+         :outcome "Patient harm - haemolytic anaemia" ;
+         :patient_age 52 ;
+         :patient_sex "Male" ;
+         :report_date "2024-08-20"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-017
+:INC-017 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-014 ;
+         :hasDevice :DEV-011 ;
+         :hasReportedByEntity :MAN-011 ;
+         :hasRisk :RSK-007 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "France" ;
+         :description "Iluvien implant required surgical removal due to device-related endophthalmitis confirmed by vitreous culture." ;
+         :detection_date "2024-08-30"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000017" ;
+         :event_date "2024-08-25"^^xsd:date ;
+         :incident_id "INC-017" ;
+         :outcome "Surgical intervention - implant removal" ;
+         :patient_age 54 ;
+         :patient_sex "Female" ;
+         :report_date "2024-09-02"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-018
+:INC-018 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasCorrectiveAction :FSCA-015 ;
+         :hasDevice :DEV-015 ;
+         :hasReportedByEntity :MAN-013 ;
+         :hasRisk :RSK-018 ;
+         :corrective_action_taken "true"^^xsd:boolean ;
+         :country_reported "Germany" ;
+         :description "5008S hemodialysis machine web interface exposed to hospital internal network. Unauthorised session accessed alarm configuration." ;
+         :detection_date "2024-09-14"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000018" ;
+         :event_date "2024-09-12"^^xsd:date ;
+         :incident_id "INC-018" ;
+         :outcome "Cybersecurity incident - unauthorised access" ;
+         :report_date "2024-09-15"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-019
+:INC-019 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :NearMissIncident ;
+         :hasDevice :DEV-023 ;
+         :hasReportedByEntity :MAN-008 ;
+         :hasRisk :RSK-001 ;
+         :corrective_action_taken "false"^^xsd:boolean ;
+         :country_reported "Sweden" ;
+         :description "Tivoli II cochlear implant failed to respond to initial activation programming. Sound processor replacement resolved the issue." ;
+         :detection_date "2024-09-30"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000019" ;
+         :event_date "2024-09-28"^^xsd:date ;
+         :incident_id "INC-019" ;
+         :outcome "Near-miss - device not activated post-surgery" ;
+         :patient_age 71 ;
+         :patient_sex "Male" ;
+         :report_date "2024-10-01"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#INC-020
+:INC-020 rdf:type owl:NamedIndividual ,
+                  :Incident ,
+                  :SeriousIncident ;
+         :hasDevice :DEV-008 ;
+         :hasReportedByEntity :MAN-003 ;
+         :hasRisk :RSK-011 ;
+         :corrective_action_taken "false"^^xsd:boolean ;
+         :country_reported "Belgium" ;
+         :description "MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan." ;
+         :detection_date "2024-10-12"^^xsd:date ;
+         :eudamed_incident_ref "EU-INC-2024-000020" ;
+         :event_date "2024-10-10"^^xsd:date ;
+         :incident_id "INC-020" ;
+         :outcome "Patient harm - SAR heating injury" ;
+         :patient_age 38 ;
+         :patient_sex "Female" ;
+         :report_date "2024-10-14"^^xsd:date .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#IVDR
+:IVDR rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Low
+:Low rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-001
+:MAN-001 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "IE/2017/001234" ;
+         :country "Ireland" ;
+         :eudamed_srn "SRN-IE-MED-0001" ;
+         :manufacturer_id "MAN-001" ;
+         :name "Medtronic plc" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-002
+:MAN-002 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "DE/2017/005678" ;
+         :country "Germany" ;
+         :eudamed_srn "SRN-DE-MED-0002" ;
+         :manufacturer_id "MAN-002" ;
+         :name "Abbott Medical Devices" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-003
+:MAN-003 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "DE/2017/009012" ;
+         :country "Germany" ;
+         :eudamed_srn "SRN-DE-MED-0003" ;
+         :manufacturer_id "MAN-003" ;
+         :name "Siemens Healthineers AG" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-004
+:MAN-004 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "NL/2017/003456" ;
+         :country "Netherlands" ;
+         :eudamed_srn "SRN-NL-MED-0004" ;
+         :manufacturer_id "MAN-004" ;
+         :name "Philips Medical Systems" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-005
+:MAN-005 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "DE/2017/007890" ;
+         :country "Germany" ;
+         :eudamed_srn "SRN-DE-MED-0005" ;
+         :manufacturer_id "MAN-005" ;
+         :name "Roche Diagnostics GmbH" ;
+         rdfs:seeAlso <http://dbpedia.org/resource/Roche_Diagnostics> .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-006
+:MAN-006 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "IE/2017/002345" ;
+         :country "Ireland" ;
+         :eudamed_srn "SRN-IE-MED-0006" ;
+         :manufacturer_id "MAN-006" ;
+         :name "Boston Scientific Corporation" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-007
+:MAN-007 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "NL/2017/006789" ;
+         :country "Netherlands" ;
+         :eudamed_srn "SRN-NL-MED-0007" ;
+         :manufacturer_id "MAN-007" ;
+         :name "Stryker Corporation" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-008
+:MAN-008 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "DE/2017/004567" ;
+         :country "Germany" ;
+         :eudamed_srn "SRN-DE-MED-0008" ;
+         :manufacturer_id "MAN-008" ;
+         :name "Biotronik SE & Co. KG" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-009
+:MAN-009 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "SE/2017/008901" ;
+         :country "Sweden" ;
+         :eudamed_srn "SRN-SE-MED-0009" ;
+         :manufacturer_id "MAN-009" ;
+         :name "GE HealthCare Technologies" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-010
+:MAN-010 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "CH/2017/001122" ;
+         :country "Switzerland" ;
+         :eudamed_srn "SRN-CH-MED-0010" ;
+         :manufacturer_id "MAN-010" ;
+         :name "Zimmer Biomet Holdings" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-011
+:MAN-011 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "UK/2017/003344" ;
+         :country "United Kingdom" ;
+         :eudamed_srn "SRN-UK-MED-0011" ;
+         :manufacturer_id "MAN-011" ;
+         :name "LivaNova PLC" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-012
+:MAN-012 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "DE/2017/005566" ;
+         :country "Germany" ;
+         :eudamed_srn "SRN-DE-MED-0012" ;
+         :manufacturer_id "MAN-012" ;
+         :name "Drägerwerk AG & Co. KGaA" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-013
+:MAN-013 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "FR/2017/007788" ;
+         :country "France" ;
+         :eudamed_srn "SRN-FR-MED-0013" ;
+         :manufacturer_id "MAN-013" ;
+         :name "Nipro Corporation" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-014
+:MAN-014 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "BE/2017/009900" ;
+         :country "Belgium" ;
+         :eudamed_srn "SRN-BE-MED-0014" ;
+         :manufacturer_id "MAN-014" ;
+         :name "Hologic Inc." .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MAN-015
+:MAN-015 rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :authorization_number "FR/2017/002211" ;
+         :country "France" ;
+         :eudamed_srn "SRN-FR-MED-0015" ;
+         :manufacturer_id "MAN-015" ;
+         :name "bioMérieux SA" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#MDR
+:MDR rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Medium
+:Medium rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Moderate
+:Moderate rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Open
+:Open rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#PatientHarm
+:PatientHarm rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#ProductQuality
+:ProductQuality rdf:type owl:NamedIndividual .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-001
+:RSK-001 rdf:type owl:NamedIndividual ,
+                  :MalfunctionRisk ,
+                  :Risk ;
+         :hasCategory :DeviceFailure ;
+         :hasProbability :Low ;
+         :hasSeverity :Critical ;
+         :description "Complete loss of electrical function leading to device shutdown" ;
+         :imdrf_code "A0101" ;
+         :risk_id "RSK-001" ;
+         :risk_name "Device failure - electrical" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-002
+:RSK-002 rdf:type owl:NamedIndividual ,
+                  :MalfunctionRisk ,
+                  :Risk ;
+         :hasCategory :DeviceFailure ;
+         :hasProbability :Medium ;
+         :hasSeverity :Critical ;
+         :description "Structural failure of mechanical components under physiological load" ;
+         :imdrf_code "A0102" ;
+         :risk_id "RSK-002" ;
+         :risk_name "Device failure - mechanical" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-003
+:RSK-003 rdf:type owl:NamedIndividual ,
+                  :InjuryRisk ,
+                  :Risk ;
+         :hasCategory :PatientHarm ;
+         :hasProbability :Low ;
+         :hasSeverity :Critical ;
+         :description "Thrombus formation on device surface causing embolic events" ;
+         :imdrf_code "A0201" ;
+         :risk_id "RSK-003" ;
+         :risk_name "Thrombosis - device-related" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-004
+:RSK-004 rdf:type owl:NamedIndividual ,
+                  :InjuryRisk ,
+                  :Risk ;
+         :hasCategory :PatientHarm ;
+         :hasProbability :Low ;
+         :hasSeverity :Serious ;
+         :description "Mechanical destruction of red blood cells by pump mechanism" ;
+         :imdrf_code "A0202" ;
+         :risk_id "RSK-004" ;
+         :risk_name "Hemolysis - pump-induced" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-005
+:RSK-005 rdf:type owl:NamedIndividual ,
+                  :MalfunctionRisk ,
+                  :Risk ;
+         :hasCategory :DevicePerformance ;
+         :hasProbability :Low ;
+         :hasSeverity :Serious ;
+         :description "Unintended displacement of implant from intended anatomical position" ;
+         :imdrf_code "A0301" ;
+         :risk_id "RSK-005" ;
+         :risk_name "Device migration - implant" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-006
+:RSK-006 rdf:type owl:NamedIndividual ,
+                  :MalfunctionRisk ,
+                  :Risk ;
+         :hasCategory :DevicePerformance ;
+         :hasProbability :Medium ;
+         :hasSeverity :Serious ;
+         :description "Cardiac lead displacement requiring repositioning or replacement" ;
+         :imdrf_code "A0302" ;
+         :risk_id "RSK-006" ;
+         :risk_name "Lead dislodgement" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-007
+:RSK-007 rdf:type owl:NamedIndividual ,
+                  :InfectionRisk ,
+                  :Risk ;
+         :hasCategory :PatientHarm ;
+         :hasProbability :Medium ;
+         :hasSeverity :Serious ;
+         :description "Device-related infection at implantation site or systemic sepsis" ;
+         :imdrf_code "A0401" ;
+         :risk_id "RSK-007" ;
+         :risk_name "Infection - device-related" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-008
+:RSK-008 rdf:type owl:NamedIndividual ,
+                  :InfectionRisk ,
+                  :Risk ;
+         :hasCategory :PatientHarm ;
+         :hasProbability :High ;
+         :hasSeverity :Moderate ;
+         :description "Bacterial biofilm accumulation on implant surface resistant to antibiotics" ;
+         :imdrf_code "A0402" ;
+         :risk_id "RSK-008" ;
+         :risk_name "Biofilm formation" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-009
+:RSK-009 rdf:type owl:NamedIndividual ,
+                  :MalfunctionRisk ,
+                  :Risk ;
+         :hasCategory :DeviceFailure ;
+         :hasProbability :Low ;
+         :hasSeverity :Critical ;
+         :description "Battery end-of-life earlier than specified, risking therapy interruption" ;
+         :imdrf_code "A0501" ;
+         :risk_id "RSK-009" ;
+         :risk_name "Battery depletion - premature" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-010
+:RSK-010 rdf:type owl:NamedIndividual ,
+                  :Risk ,
+                  :SoftwareRisk ;
+         :hasCategory :DeviceFailure ;
+         :hasProbability :Low ;
+         :hasSeverity :Critical ;
+         :description "Software bug causing incorrect dosing, alarming, or therapy delivery" ;
+         :imdrf_code "A0502" ;
+         :risk_id "RSK-010" ;
+         :risk_name "Software malfunction" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-011
+:RSK-011 rdf:type owl:NamedIndividual ,
+                  :RadiationRisk ,
+                  :Risk ;
+         :hasCategory :PatientHarm ;
+         :hasProbability :Low ;
+         :hasSeverity :Critical ;
+         :description "Unintended ionising radiation exposure exceeding therapeutic dose" ;
+         :imdrf_code "A0601" ;
+         :risk_id "RSK-011" ;
+         :risk_name "Radiation overdose" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-012
+:RSK-012 rdf:type owl:NamedIndividual ,
+                  :InterferenceRisk ,
+                  :Risk ;
+         :hasCategory :DevicePerformance ;
+         :hasProbability :High ;
+         :hasSeverity :Moderate ;
+         :description "Metallic implant causing MRI image artifacts compromising diagnostics" ;
+         :imdrf_code "A0701" ;
+         :risk_id "RSK-012" ;
+         :risk_name "Metallic artifact - MRI" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-013
+:RSK-013 rdf:type owl:NamedIndividual ,
+                  :InterferenceRisk ,
+                  :Risk ;
+         :hasCategory :DevicePerformance ;
+         :hasProbability :Low ;
+         :hasSeverity :Serious ;
+         :description "External EMI affecting pacemaker/ICD sensing and pacing functions" ;
+         :imdrf_code "A0702" ;
+         :risk_id "RSK-013" ;
+         :risk_name "Electromagnetic interference" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-014
+:RSK-014 rdf:type owl:NamedIndividual ,
+                  :DiagnosticRisk ,
+                  :Risk ;
+         :hasCategory :DiagnosticError ;
+         :hasProbability :Medium ;
+         :hasSeverity :Serious ;
+         :description "IVD test returns positive result in absence of target condition" ;
+         :imdrf_code "B0101" ;
+         :risk_id "RSK-014" ;
+         :risk_name "False positive result" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-015
+:RSK-015 rdf:type owl:NamedIndividual ,
+                  :DiagnosticRisk ,
+                  :Risk ;
+         :hasCategory :DiagnosticError ;
+         :hasProbability :Low ;
+         :hasSeverity :Critical ;
+         :description "IVD test fails to detect target condition in affected individual" ;
+         :imdrf_code "B0102" ;
+         :risk_id "RSK-015" ;
+         :risk_name "False negative result" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-016
+:RSK-016 rdf:type owl:NamedIndividual ,
+                  :DiagnosticRisk ,
+                  :Risk ;
+         :hasCategory :DiagnosticError ;
+         :hasProbability :Medium ;
+         :hasSeverity :Serious ;
+         :description "Reagent reacts with non-target analyte producing incorrect result" ;
+         :imdrf_code "B0201" ;
+         :risk_id "RSK-016" ;
+         :risk_name "Cross-reactivity" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-017
+:RSK-017 rdf:type owl:NamedIndividual ,
+                  :ContaminationRisk ,
+                  :Risk ;
+         :hasCategory :ProductQuality ;
+         :hasProbability :Low ;
+         :hasSeverity :Critical ;
+         :description "Reagent lot contamination leading to systematic diagnostic errors" ;
+         :imdrf_code "B0301" ;
+         :risk_id "RSK-017" ;
+         :risk_name "Contamination - reagent" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-018
+:RSK-018 rdf:type owl:NamedIndividual ,
+                  :CybersecurityRisk ,
+                  :Risk ;
+         :hasCategory :DeviceSafety ;
+         :hasProbability :Low ;
+         :hasSeverity :Critical ;
+         :description "Exploitable software vulnerability enabling unauthorized device access" ;
+         :imdrf_code "B0401" ;
+         :risk_id "RSK-018" ;
+         :risk_name "Cybersecurity vulnerability" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-019
+:RSK-019 rdf:type owl:NamedIndividual ,
+                  :MaterialRisk ,
+                  :Risk ;
+         :hasCategory :PatientHarm ;
+         :hasProbability :Medium ;
+         :hasSeverity :Serious ;
+         :description "Particulate debris from bearing surfaces causing adverse tissue reaction" ;
+         :imdrf_code "C0101" ;
+         :risk_id "RSK-019" ;
+         :risk_name "Wear debris - joint implant" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#RSK-020
+:RSK-020 rdf:type owl:NamedIndividual ,
+                  :MaterialRisk ,
+                  :Risk ;
+         :hasCategory :PatientHarm ;
+         :hasProbability :Low ;
+         :hasSeverity :Serious ;
+         :description "Metallic ion release from corrosion causing local or systemic toxicity" ;
+         :imdrf_code "C0201" ;
+         :risk_id "RSK-020" ;
+         :risk_name "Corrosion - metallic implant" .
+
+
+###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Serious
+:Serious rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:ClassC rdfs:comment "Moderate to high individual risk and low to moderate public health risk (IVDR)."@en ;
+        rdfs:label "Class C"@en .
+
+
+:ClassD rdfs:comment "High individual risk and high public health risk (IVDR)."@en ;
+        rdfs:label "Class D"@en .
+
+
+:ClassIII rdfs:comment "Highest risk class for medical devices."@en ;
+          rdfs:label "Class III"@en .
+
+
+:ClassIIa rdfs:comment "Low to moderate risk class for medical devices."@en ;
+          rdfs:label "Class IIa"@en .
+
+
+:ClassIIb rdfs:comment "Moderate to high risk class for medical devices."@en ;
+          rdfs:label "Class IIb"@en .
+
+
+:Closed rdfs:comment "Status indicating that the action has been completed."@en ;
+        rdfs:label "Closed"@en .
+
+
+:Critical rdfs:comment "Highest level of severity representing extreme danger to life."@en ;
+          rdfs:label "Critical"@en .
+
+
+:DeviceFailure rdfs:comment "Risk category involving the breakdown or failure of the device."@en ;
+               rdfs:label "Device Failure"@en .
+
+
+:DevicePerformance rdfs:comment "Risk category involving inadequate performance of the device."@en ;
+                   rdfs:label "Device Performance"@en .
+
+
+:DeviceSafety rdfs:comment "Risk category involving compromised safety of the device."@en ;
+              rdfs:label "Device Safety"@en .
+
+
+:DiagnosticError rdfs:comment "Risk category involving incorrect diagnostic results."@en ;
+                 rdfs:label "Diagnostic Error"@en .
+
+
+:High rdfs:comment "High likelihood of occurrence."@en ;
+      rdfs:label "High"@en .
+
+
+:IVDR rdfs:comment "In Vitro Diagnostic Regulation (EU) 2017/746."@en ;
+      rdfs:label "IVDR"@en .
+
+
+:Low rdfs:comment "Low likelihood of occurrence."@en ;
+     rdfs:label "Low"@en .
+
+
+:MDR rdfs:comment "Medical Device Regulation (EU) 2017/745."@en ;
+     rdfs:label "MDR"@en .
+
+
+:Medium rdfs:comment "Medium likelihood of occurrence."@en ;
+        rdfs:label "Medium"@en .
+
+
+:Moderate rdfs:comment "Moderate level of severity."@en ;
+          rdfs:label "Moderate"@en .
+
+
+:Open rdfs:comment "Status indicating that the action is still in progress."@en ;
+      rdfs:label "Open"@en .
+
+
+:PatientHarm rdfs:comment "Risk category involving direct injury to the patient."@en ;
+             rdfs:label "Patient Harm"@en .
+
+
+:ProductQuality rdfs:comment "Risk category related to manufacturing or product defects."@en ;
+                rdfs:label "Product Quality"@en .
+
+
+:Serious rdfs:comment "High level of severity involving significant injury or impairment."@en ;
+         rdfs:label "Serious"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ActiveDevice
+                :ActiveImplant
+                :ImplantableActiveDevice
+                :ImplantableDevice
+                :InVitroDiagnosticDevice
+                :SelfTestDevice
+                :SingleUseDevice
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ClassC
+                :ClassD
+                :ClassIII
+                :ClassIIa
+                :ClassIIb
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ContaminationRisk
+                :CybersecurityRisk
+                :DiagnosticRisk
+                :InfectionRisk
+                :InjuryRisk
+                :InterferenceRisk
+                :MalfunctionRisk
+                :MaterialRisk
+                :RadiationRisk
+                :SoftwareRisk
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Critical
+                :Moderate
+                :Serious
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DeviceFailure
+                :DevicePerformance
+                :DeviceSafety
+                :DiagnosticError
+                :PatientHarm
+                :ProductQuality
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :High
+                :Low
+                :Medium
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :InSituCorrection
+                :Recall
+                :SafetyAlert
+                :UserNotice
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#date> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#m> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRisk ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSeverity ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :Critical
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighRiskIncident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Manufacturer ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#m>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isManufacturerOf ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#m> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#d>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isDeviceInvolvedIn ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#i>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :HighRiskIncident ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CriticalManufacturer ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#m>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CorrectiveAction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :closure_date ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#date>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CompletedAction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :is_active ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :is_implantable ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ActiveImplantableDevice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
