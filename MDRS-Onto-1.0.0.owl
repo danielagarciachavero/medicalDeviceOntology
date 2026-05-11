@@ -130,27 +130,9 @@
     
 
 
-    <!-- http://purl.org/dc/terms/date -->
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
 
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/date"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/description"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/identifier -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/identifier"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#dcterms_identifier -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dcterms_identifier"/>
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -406,7 +388,7 @@
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date">
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CorrectiveAction"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment xml:lang="en">The date when the corrective action was initiated.</rdfs:comment>
         <rdfs:label xml:lang="en">action date</rdfs:label>
     </owl:DatatypeProperty>
@@ -428,7 +410,7 @@
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date">
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CorrectiveAction"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment xml:lang="en">The date when the corrective action was officially closed.</rdfs:comment>
         <rdfs:label xml:lang="en">closure date</rdfs:label>
     </owl:DatatypeProperty>
@@ -504,8 +486,7 @@
     <!-- https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description -->
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> 
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/description"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/> <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A detailed textual narrative explaining the entity.</rdfs:comment>
         <rdfs:label xml:lang="en">description</rdfs:label>
     </owl:DatatypeProperty>
@@ -516,7 +497,7 @@
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date">
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment xml:lang="en">The date when the incident or risk was first detected.</rdfs:comment>
         <rdfs:label xml:lang="en">detection date</rdfs:label>
     </owl:DatatypeProperty>
@@ -528,7 +509,7 @@
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Device"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The unique identifier assigned to a specific medical device unit or model.</rdfs:comment>
         <rdfs:label xml:lang="en">device id</rdfs:label>
     </owl:DatatypeProperty>
@@ -594,7 +575,7 @@
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date">
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment xml:lang="en">The specific calendar date when the incident occurred.</rdfs:comment>
         <rdfs:label xml:lang="en">event date</rdfs:label>
     </owl:DatatypeProperty>
@@ -605,7 +586,7 @@
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id">
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CorrectiveAction"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The identifier for the Field Safety Corrective Action.</rdfs:comment>
         <rdfs:label xml:lang="en">fsca id</rdfs:label>
     </owl:DatatypeProperty>
@@ -616,7 +597,7 @@
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code">
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Risk"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The International Medical Device Regulators Forum code associated with the risk.</rdfs:comment>
         <rdfs:label xml:lang="en">imdrf code</rdfs:label>
     </owl:DatatypeProperty>
@@ -628,7 +609,7 @@
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The unique identifier for the reported incident.</rdfs:comment>
         <rdfs:label xml:lang="en">incident id</rdfs:label>
     </owl:DatatypeProperty>
@@ -695,7 +676,7 @@
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Manufacturer"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The unique identifier for the manufacturer.</rdfs:comment>
         <rdfs:label xml:lang="en">manufacturer id</rdfs:label>
     </owl:DatatypeProperty>
@@ -750,7 +731,7 @@
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date">
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment xml:lang="en">The date when the incident was officially reported.</rdfs:comment>
         <rdfs:label xml:lang="en">report date</rdfs:label>
     </owl:DatatypeProperty>
@@ -762,7 +743,7 @@
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Risk"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The unique identifier for the risk.</rdfs:comment>
         <rdfs:label xml:lang="en">risk id</rdfs:label>
     </owl:DatatypeProperty>
@@ -795,7 +776,7 @@
 
     <owl:DatatypeProperty rdf:about="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di">
         <rdfs:domain rdf:resource="https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Device"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The Unique Device Identification Device Identifier.</rdfs:comment>
         <rdfs:label xml:lang="en">udi di</rdfs:label>
     </owl:DatatypeProperty>

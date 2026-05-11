@@ -119,24 +119,8 @@
 #    Datatypes
 #################################################################
 
-###  http://purl.org/dc/terms/date
-<http://purl.org/dc/terms/date> rdf:type rdfs:Datatype .
-
-
-###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type rdfs:Datatype .
-
-
-###  http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> rdf:type rdfs:Datatype .
-
-
 ###  http://www.w3.org/2001/XMLSchema#date
 xsd:date rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#dcterms_identifier
-xsd:dcterms_identifier rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -316,7 +300,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date
 :action_date rdf:type owl:DatatypeProperty ;
              rdfs:domain :CorrectiveAction ;
-             rdfs:range <http://purl.org/dc/terms/date> ;
+             rdfs:range xsd:date ;
              rdfs:comment "The date when the corrective action was initiated."@en ;
              rdfs:label "action date"@en .
 
@@ -332,7 +316,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date
 :closure_date rdf:type owl:DatatypeProperty ;
               rdfs:domain :CorrectiveAction ;
-              rdfs:range <http://purl.org/dc/terms/date> ;
+              rdfs:range xsd:date ;
               rdfs:comment "The date when the corrective action was officially closed."@en ;
               rdfs:label "closure date"@en .
 
@@ -388,7 +372,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description
 :description rdf:type owl:DatatypeProperty ;
              rdfs:domain owl:Thing ;
-             rdfs:range <http://purl.org/dc/terms/description> ;
+             rdfs:range xsd:string ;
              rdfs:comment "A detailed textual narrative explaining the entity."@en ;
              rdfs:label "description"@en .
 
@@ -396,7 +380,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date
 :detection_date rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Incident ;
-                rdfs:range <http://purl.org/dc/terms/date> ;
+                rdfs:range xsd:date ;
                 rdfs:comment "The date when the incident or risk was first detected."@en ;
                 rdfs:label "detection date"@en .
 
@@ -405,7 +389,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 :device_id rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain :Device ;
-           rdfs:range <http://purl.org/dc/terms/identifier> ;
+           rdfs:range xsd:string ;
            rdfs:comment "The unique identifier assigned to a specific medical device unit or model."@en ;
            rdfs:label "device id"@en .
 
@@ -453,7 +437,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date
 :event_date rdf:type owl:DatatypeProperty ;
             rdfs:domain :Incident ;
-            rdfs:range <http://purl.org/dc/terms/date> ;
+            rdfs:range xsd:date ;
             rdfs:comment "The specific calendar date when the incident occurred."@en ;
             rdfs:label "event date"@en .
 
@@ -461,7 +445,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id
 :fsca_id rdf:type owl:DatatypeProperty ;
          rdfs:domain :CorrectiveAction ;
-         rdfs:range <http://purl.org/dc/terms/identifier> ;
+         rdfs:range xsd:string ;
          rdfs:comment "The identifier for the Field Safety Corrective Action."@en ;
          rdfs:label "fsca id"@en .
 
@@ -469,7 +453,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code
 :imdrf_code rdf:type owl:DatatypeProperty ;
             rdfs:domain :Risk ;
-            rdfs:range <http://purl.org/dc/terms/identifier> ;
+            rdfs:range xsd:string ;
             rdfs:comment "The International Medical Device Regulators Forum code associated with the risk."@en ;
             rdfs:label "imdrf code"@en .
 
@@ -478,7 +462,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 :incident_id rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :Incident ;
-             rdfs:range <http://purl.org/dc/terms/identifier> ;
+             rdfs:range xsd:string ;
              rdfs:comment "The unique identifier for the reported incident."@en ;
              rdfs:label "incident id"@en .
 
@@ -527,7 +511,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 :manufacturer_id rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain :Manufacturer ;
-                 rdfs:range <http://purl.org/dc/terms/identifier> ;
+                 rdfs:range xsd:string ;
                  rdfs:comment "The unique identifier for the manufacturer."@en ;
                  rdfs:label "manufacturer id"@en .
 
@@ -567,7 +551,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date
 :report_date rdf:type owl:DatatypeProperty ;
              rdfs:domain :Incident ;
-             rdfs:range <http://purl.org/dc/terms/date> ;
+             rdfs:range xsd:date ;
              rdfs:comment "The date when the incident was officially reported."@en ;
              rdfs:label "report date"@en .
 
@@ -576,7 +560,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 :risk_id rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain :Risk ;
-         rdfs:range <http://purl.org/dc/terms/identifier> ;
+         rdfs:range xsd:string ;
          rdfs:comment "The unique identifier for the risk."@en ;
          rdfs:label "risk id"@en .
 
@@ -600,7 +584,7 @@ xsd:dcterms_identifier rdf:type rdfs:Datatype .
 ###  https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di
 :udi_di rdf:type owl:DatatypeProperty ;
         rdfs:domain :Device ;
-        rdfs:range <http://purl.org/dc/terms/identifier> ;
+        rdfs:range xsd:string ;
         rdfs:comment "The Unique Device Identification Device Identifier."@en ;
         rdfs:label "udi di"@en .
 

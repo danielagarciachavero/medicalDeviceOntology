@@ -100,20 +100,8 @@
 # #################################################################
 # 
 # 
-# http://purl.org/dc/terms/date
-<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
-# http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
-# http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
 # http://www.w3.org/2001/XMLSchema#date
 <http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
-# http://www.w3.org/2001/XMLSchema#dcterms_identifier
-<http://www.w3.org/2001/XMLSchema#dcterms_identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 # 
 # 
 # 
@@ -289,7 +277,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CorrectiveAction> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/date> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the corrective action was initiated."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#action_date> <http://www.w3.org/2000/01/rdf-schema#label> "action date"@en .
 # 
@@ -303,7 +291,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CorrectiveAction> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/date> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the corrective action was officially closed."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#closure_date> <http://www.w3.org/2000/01/rdf-schema#label> "closure date"@en .
 # 
@@ -352,14 +340,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/description> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description> <http://www.w3.org/2000/01/rdf-schema#comment> "A detailed textual narrative explaining the entity."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
 # 
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/date> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the incident or risk was first detected."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date> <http://www.w3.org/2000/01/rdf-schema#label> "detection date"@en .
 # 
@@ -367,7 +355,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Device> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/identifier> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique identifier assigned to a specific medical device unit or model."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id> <http://www.w3.org/2000/01/rdf-schema#label> "device id"@en .
 # 
@@ -409,21 +397,21 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/date> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific calendar date when the incident occurred."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#event_date> <http://www.w3.org/2000/01/rdf-schema#label> "event date"@en .
 # 
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#CorrectiveAction> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/identifier> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier for the Field Safety Corrective Action."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id> <http://www.w3.org/2000/01/rdf-schema#label> "fsca id"@en .
 # 
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Risk> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/identifier> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Medical Device Regulators Forum code associated with the risk."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#imdrf_code> <http://www.w3.org/2000/01/rdf-schema#label> "imdrf code"@en .
 # 
@@ -431,7 +419,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/identifier> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique identifier for the reported incident."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id> <http://www.w3.org/2000/01/rdf-schema#label> "incident id"@en .
 # 
@@ -474,7 +462,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Manufacturer> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/identifier> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique identifier for the manufacturer."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#manufacturer_id> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturer id"@en .
 # 
@@ -509,7 +497,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Incident> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/date> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the incident was officially reported."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#report_date> <http://www.w3.org/2000/01/rdf-schema#label> "report date"@en .
 # 
@@ -517,7 +505,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Risk> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/identifier> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique identifier for the risk."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id> <http://www.w3.org/2000/01/rdf-schema#label> "risk id"@en .
 # 
@@ -538,7 +526,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#Device> .
-<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/identifier> .
+<https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di> <http://www.w3.org/2000/01/rdf-schema#comment> "The Unique Device Identification Device Identifier."@en .
 <https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#udi_di> <http://www.w3.org/2000/01/rdf-schema#label> "udi di"@en .
 # 

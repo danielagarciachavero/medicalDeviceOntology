@@ -897,15 +897,6 @@
   "@id" : "http://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/date",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/description",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/identifier",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
   "@id" : "http://purl.org/dc/terms/issued",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -934,9 +925,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
-  "@id" : "http://www.w3.org/2001/XMLSchema#dcterms_identifier",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl",
@@ -5635,7 +5623,7 @@
     "@value" : "action date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/date"
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#authorization_number",
@@ -5669,7 +5657,7 @@
     "@value" : "closure date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/date"
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#competent_authority",
@@ -5788,7 +5776,7 @@
     "@value" : "description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/description"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#detection_date",
@@ -5805,7 +5793,7 @@
     "@value" : "detection date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/date"
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_id",
@@ -5822,7 +5810,7 @@
     "@value" : "device id"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/identifier"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#device_name",
@@ -5924,7 +5912,7 @@
     "@value" : "event date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/date"
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#fsca_id",
@@ -5941,7 +5929,7 @@
     "@value" : "fsca id"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/identifier"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#hasActionType",
@@ -6225,7 +6213,7 @@
     "@value" : "imdrf code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/identifier"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#incident_id",
@@ -6242,7 +6230,7 @@
     "@value" : "incident id"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/identifier"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#intended_purpose",
@@ -6412,7 +6400,7 @@
     "@value" : "manufacturer id"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/identifier"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#name",
@@ -6497,7 +6485,7 @@
     "@value" : "report date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/date"
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_id",
@@ -6514,7 +6502,7 @@
     "@value" : "risk id"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/identifier"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://danielagarciachavero.github.io/medicalDeviceOntology/MDRS-Onto.owl#risk_name",
@@ -6565,7 +6553,7 @@
     "@value" : "udi di"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/dc/terms/identifier"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://schema.org/citation",
